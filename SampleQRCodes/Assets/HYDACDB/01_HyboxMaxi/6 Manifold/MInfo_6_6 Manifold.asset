@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_6_6 Manifold
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 6
+  iname: Manifold
+  description: This is the manifold
+  IsViewable: 1
+  isStatic: 0
+  highPolyReference:
+    m_AssetGUID: 3eefd8b922cbf504aa3c627065c3fcc5
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: fbebe2af240174d4996b2b5912993e13
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/hsUX0EVLEdo
+  subModules:
+  - {fileID: 11400000, guid: 2b9071d883c4d3642b7343c8dd0cee4f, type: 2}
+  - {fileID: 11400000, guid: a9860cd0d497eff43b81693bdc9e86bc, type: 2}
+  - {fileID: 11400000, guid: f5f0aef77bf1ab041b6cfedb053955d2, type: 2}
+  - {fileID: 11400000, guid: d124a9d8b4ed77a4eb5be54937c0a75b, type: 2}
+  - {fileID: 11400000, guid: 8d81142dd35c0204aad485a67bc13276, type: 2}
+  - {fileID: 11400000, guid: b2d84d98cfc4d864693a10d76d0f8a6e, type: 2}
+  - {fileID: 11400000, guid: 2aebea7f607672743a14ed5f63464f4b, type: 2}
+  - {fileID: 11400000, guid: c3dc1a5781fd45146afc5a5e0702ac18, type: 2}
+  - {fileID: 11400000, guid: aa3dbe7f5a9d2564f98bb9f186f419bb, type: 2}
+  - {fileID: 11400000, guid: e29a327e17defce46952c5969eb3eb07, type: 2}
+  - {fileID: 11400000, guid: cdce6d7d07b2f1448b36d467e7651241, type: 2}
+  - {fileID: 11400000, guid: f8c86a1c7e235ff4081a5549afb4ed27, type: 2}
+  - {fileID: 11400000, guid: 01ce4201718cdf644932c40c2bc80349, type: 2}
+  - {fileID: 11400000, guid: 7317713b73d099445be40b84f3dbb1ad, type: 2}
+  - {fileID: 11400000, guid: 1228c39ebb1bdfb4db9306086222bc62, type: 2}
+  - {fileID: 11400000, guid: 06cf9b28f75b4824fbf24e45a6d25e7d, type: 2}
+  - {fileID: 11400000, guid: 944a7f899b0bf9a42803d234e7cabd3b, type: 2}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_5_5 Safety Valve
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 5
+  iname: Safety Valve
+  description: 'Description:'
+  IsViewable: 1
+  isStatic: 0
+  HasVideo: 0
+  highPolyReference:
+    m_AssetGUID: fcc2a887359d06b47bea00d8276f262f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: 19f00ce41f057ff4b826fd2439306a45
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoReference:
+    m_AssetGUID: 68b29c594c03fcb418a620f5cc6dc2a6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  subModules:
+  - {fileID: 11400000, guid: 507b5afc3db0a4e499b21a9d87bad374, type: 2}
+  - {fileID: 11400000, guid: 284e088d1ba80e74090aed1af475670c, type: 2}
+  - {fileID: 11400000, guid: 18f47603b47cca44fb4380bbe6542485, type: 2}
+  - {fileID: 11400000, guid: 4a68e45f48981174193804a1de5e414a, type: 2}
+  - {fileID: 11400000, guid: 6843bccb8326c5e4e81041406d74d1f4, type: 2}

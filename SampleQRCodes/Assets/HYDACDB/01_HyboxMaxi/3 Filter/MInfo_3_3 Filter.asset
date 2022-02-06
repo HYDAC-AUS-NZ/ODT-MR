@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_3_3 Filter
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 3
+  iname: Filter
+  description: 'Description:'
+  isStatic: 0
+  highPolyReference:
+    m_AssetGUID: 1932f2aafcf18ad4da917a17d1fb6018
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: 61c42255922c5b14284f63fd41e04fa2
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/ChXdmhJw420
+  subModules:
+  - {fileID: 11400000, guid: 2248c193ffd2a9040a953ff3523bbe4e, type: 2}
+  - {fileID: 11400000, guid: 54d72e77b831776409856e3ad88ce209, type: 2}
+  - {fileID: 11400000, guid: a18c41ff4f978fc429b5051379c506a1, type: 2}
+  - {fileID: 11400000, guid: 39abb785f0b010b47915a4249c1161d4, type: 2}

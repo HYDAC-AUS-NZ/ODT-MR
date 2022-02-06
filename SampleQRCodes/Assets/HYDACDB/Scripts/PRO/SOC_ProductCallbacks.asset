@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7485eb214a074badb7c173134c7c84c0, type: 3}
+  m_Name: SOC_ProductCallbacks
+  m_EditorClassIdentifier: 
+  explodeTime: 2.5
+  Modules:
+  - {fileID: 11400000, guid: 13cd6e681cbf12d448dee8ddf9a88965, type: 2}
+  - {fileID: 11400000, guid: ca96400fdc3563449ac113a3a36484a2, type: 2}
+  - {fileID: 11400000, guid: 7e4523d217a12504abca34cd8593327c, type: 2}
+  - {fileID: 11400000, guid: c6efe69a333c34f46b62e21949dd9fb0, type: 2}
+  - {fileID: 11400000, guid: d4c6af246af2dd14880a42d0a1390d42, type: 2}
+  - {fileID: 11400000, guid: b78e709ea0af9974ab7062d85ef38b7a, type: 2}
+  - {fileID: 11400000, guid: e8bd1a5c5a877c44a8f97387505f242b, type: 2}
+  - {fileID: 11400000, guid: 7230bebbfb15edc4e8d88123c424d220, type: 2}
+  IsInitialised: 0

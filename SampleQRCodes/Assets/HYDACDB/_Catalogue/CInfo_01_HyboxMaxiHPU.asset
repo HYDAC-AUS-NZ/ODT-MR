@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bb01c3eb680964c9e51bcd99dae6bf, type: 3}
+  m_Name: CInfo_01_HyboxMaxiHPU
+  m_EditorClassIdentifier: Assembly-CSharp:HYDAC.Scripts.MOD.SInfo:AsAssemblyInfo
+  renameOnValidate: 0
+  ID: 1
+  iname: Hybox Maxi HPU
+  description: This is an hydraulic power unit
+  isLoadable: 1
+  Modules:
+  - {fileID: 11400000, guid: 13cd6e681cbf12d448dee8ddf9a88965, type: 2}
+  - {fileID: 11400000, guid: ca96400fdc3563449ac113a3a36484a2, type: 2}
+  - {fileID: 11400000, guid: 7e4523d217a12504abca34cd8593327c, type: 2}
+  - {fileID: 11400000, guid: c6efe69a333c34f46b62e21949dd9fb0, type: 2}
+  - {fileID: 11400000, guid: d4c6af246af2dd14880a42d0a1390d42, type: 2}
+  - {fileID: 11400000, guid: b78e709ea0af9974ab7062d85ef38b7a, type: 2}
+  - {fileID: 11400000, guid: e8bd1a5c5a877c44a8f97387505f242b, type: 2}
+  - {fileID: 11400000, guid: 7230bebbfb15edc4e8d88123c424d220, type: 2}
+  productAssetsKey: 01_HYBOXMaxiHPU
+  productImage: {fileID: 21300000, guid: 57bb5b98e00551848afc5ee96ac4fe81, type: 3}
+  schematicReference:
+    m_AssetGUID: 3572e879b946c0f4786e1cbe76125655
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  productPrefab:
+    m_AssetGUID: 4ee7faa79a2a2d04199b71dc2d0c7f50
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

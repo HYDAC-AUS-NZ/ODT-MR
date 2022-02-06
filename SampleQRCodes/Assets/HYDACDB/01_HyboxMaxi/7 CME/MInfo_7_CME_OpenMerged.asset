@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_7_CME_OpenMerged
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 7
+  iname: CME
+  description: This is the CME
+  IsViewable: 1
+  isStatic: 1
+  HasVideo: 0
+  highPolyReference:
+    m_AssetGUID: b05d9c72995a5634cb7e3ab2f4695153
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: 5a04471617c167449a525a3991547809
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoReference:
+    m_AssetGUID: 68b29c594c03fcb418a620f5cc6dc2a6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  subModules: []

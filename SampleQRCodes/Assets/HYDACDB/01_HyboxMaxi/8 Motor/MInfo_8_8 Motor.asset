@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_8_8 Motor
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 8
+  iname: Motor / Pump
+  description: 'Description:'
+  isStatic: 0
+  highPolyReference:
+    m_AssetGUID: 03c8307a0ab3a1843a2f27ded51cf6e9
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: 09811a7ae6fd29c40bd024dd04ca4c16
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoURL: 
+  subModules:
+  - {fileID: 11400000, guid: c0354a5a6f897c14c9562b29a34229bf, type: 2}
+  - {fileID: 11400000, guid: a482f81eae5874144ae9dcfe6448356b, type: 2}
+  - {fileID: 11400000, guid: 32ad0e5f0ad37274cbb04baa37adfd8b, type: 2}
+  - {fileID: 11400000, guid: 170438066ec9b574fb44f02fd07a99a1, type: 2}
+  - {fileID: 11400000, guid: 18afa4410c48ba142a0f3460534d915c, type: 2}
+  - {fileID: 11400000, guid: e2033841b10e1b649b57f180d466d455, type: 2}
+  - {fileID: 11400000, guid: 9783528c675813746b40f770e25c9714, type: 2}
+  - {fileID: 11400000, guid: 2b704f171c1dd7e48a7ed524f6a4d0ae, type: 2}

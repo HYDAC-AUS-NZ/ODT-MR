@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_4_4 Air Cooler
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 4
+  iname: Cooler
+  description: 'Description:'
+  IsViewable: 1
+  isStatic: 0
+  HasVideo: 0
+  highPolyReference:
+    m_AssetGUID: 6e98bbdf5265be744acfc78f620face3
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: a209c47171838be4ca6f919e29dbd2bf
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoReference:
+    m_AssetGUID: 68b29c594c03fcb418a620f5cc6dc2a6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  subModules:
+  - {fileID: 11400000, guid: da4a8486ff733cf41b2f82131797a014, type: 2}
+  - {fileID: 11400000, guid: 96a42859f87203b45a76172fb7256185, type: 2}
+  - {fileID: 11400000, guid: 16cbc7f99be820049bcbb039686c7260, type: 2}
+  - {fileID: 11400000, guid: 406bdd86ed6ffaf4ea87c7191b491880, type: 2}
+  - {fileID: 11400000, guid: 2c580669e934897449d15ec50fbb73fe, type: 2}
+  - {fileID: 11400000, guid: b8d616432c9de6346ae2bad3a6c4931a, type: 2}
+  - {fileID: 11400000, guid: 4fa245a3cacfce54cae49d21039cfab6, type: 2}
+  - {fileID: 11400000, guid: add038350dc3baf4bb90f4125833a782, type: 2}
+  - {fileID: 11400000, guid: 86f480d69eef569429d3023d19f45fa5, type: 2}
+  - {fileID: 11400000, guid: 347ef74f655cd04459675633206cbd5b, type: 2}
+  - {fileID: 11400000, guid: a8cd8db5c7db4ef43a70a43a1ff2b933, type: 2}
+  - {fileID: 11400000, guid: 6f79f8a79fee3cc4db4d43f42491af14, type: 2}

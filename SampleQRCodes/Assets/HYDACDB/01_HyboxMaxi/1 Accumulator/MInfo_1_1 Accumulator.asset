@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
+  m_Name: MInfo_1_1 Accumulator
+  m_EditorClassIdentifier: 
+  renameOnValidate: 0
+  ID: 1
+  iname: Accumulator
+  description: This is the accumulator
+  IsViewable: 1
+  isStatic: 0
+  highPolyReference:
+    m_AssetGUID: efa44476de9fb5746949ddc1283744b5
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  infoUIReference:
+    m_AssetGUID: 125007f832152a04fa0657f3c43e63e0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/WvqPoOyNog0
+  subModules:
+  - {fileID: 11400000, guid: da2d6ea394b437c4098e53597d70c4cd, type: 2}
+  - {fileID: 11400000, guid: 6a66058552434114aa742000028d0dc7, type: 2}
+  - {fileID: 11400000, guid: 3fcf0945ba4265741a3bb86733991d67, type: 2}
+  - {fileID: 11400000, guid: 5acc1ffbce7bd0c409a0342e15215d50, type: 2}
+  - {fileID: 11400000, guid: 59609853a6e672d4abd55b53c68e65af, type: 2}
+  - {fileID: 11400000, guid: 6a24218840e116d40b64a290049b16af, type: 2}
+  - {fileID: 11400000, guid: 86a4af915a0876a408fc4fda70d973cc, type: 2}
+  - {fileID: 11400000, guid: 7cdb2fb5f9d4f3041b9553581c59cfa0, type: 2}

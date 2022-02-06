@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2f5e2f7e55e6c4db3da309ff799c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AutoStartQRTracking: 1
+  AutoStartQRTracking: 0
 --- !u!114 &5731539863259288648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,5 +57,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c011a6cf24698544bfd05b3bb6c96da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   qrCodePrefab: {fileID: 1200717071578424, guid: c1ee661b6abcfb94a99177d12a3255ef,
     type: 3}
