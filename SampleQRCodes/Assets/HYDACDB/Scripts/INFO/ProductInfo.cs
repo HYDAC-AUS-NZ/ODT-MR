@@ -11,6 +11,8 @@ namespace HYDACDB.INFO
         [Header("Main Information")] 
         public int ID;
 
+        public string productID;
+
         public string iname;
         [TextArea] public string description;
         

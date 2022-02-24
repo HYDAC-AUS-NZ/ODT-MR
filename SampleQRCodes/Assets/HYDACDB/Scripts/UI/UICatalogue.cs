@@ -33,12 +33,12 @@ namespace HYDACDB.UI
 
         private void OnEnable()
         {
-            productCallbacks.EToggleCatalogueUI += OnToggleUI;
+            //vproductCallbacks.EToggleCatalogueUI += OnToggleUI;
         }
 
         private void OnDisable()
         {
-            productCallbacks.EToggleCatalogueUI -= OnToggleUI;
+            //productCallbacks.EToggleCatalogueUI -= OnToggleUI;
 
             for (int i = 0; i < _buttonTransforms.Length; i++)
             {
@@ -75,7 +75,7 @@ namespace HYDACDB.UI
                 catalogue.Add(result);
             }).Task;
 
-            productCallbacks.SetCatalogue(catalogue.ToArray());
+            //productCallbacks.SetCatalogue(catalogue.ToArray());
 
             var buttonTransforms = new List<Transform>();
 
@@ -85,7 +85,7 @@ namespace HYDACDB.UI
                 var button = await Addressables.InstantiateAsync(catalogueButtonPrefab, catalogueButtonParent).Task;
 
                 buttonTransforms.Add(button.transform);
-                button.GetComponentInChildren<UIBtnCatalogue>().Initialize(catalogue[i], transform);
+                button.GetComponentInChildren<UIBtnCatalogue>().Initialize(catalogue[i]);
             }
 
             _buttonTransforms = buttonTransforms.ToArray();

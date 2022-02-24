@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renameOnValidate: 0
   ID: 6
+  productID: manifold1
   iname: Manifold
   description: This is the manifold
-  IsViewable: 1
   isStatic: 0
   highPolyReference:
     m_AssetGUID: 3eefd8b922cbf504aa3c627065c3fcc5

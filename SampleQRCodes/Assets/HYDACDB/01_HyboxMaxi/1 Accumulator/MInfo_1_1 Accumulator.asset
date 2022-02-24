@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renameOnValidate: 0
   ID: 1
+  productID: 3262606
   iname: Accumulator
   description: This is the accumulator
-  IsViewable: 1
   isStatic: 0
   highPolyReference:
     m_AssetGUID: efa44476de9fb5746949ddc1283744b5
@@ -30,11 +30,19 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   videoURL: https://youtu.be/WvqPoOyNog0
   subModules:
-  - {fileID: 11400000, guid: da2d6ea394b437c4098e53597d70c4cd, type: 2}
-  - {fileID: 11400000, guid: 6a66058552434114aa742000028d0dc7, type: 2}
-  - {fileID: 11400000, guid: 3fcf0945ba4265741a3bb86733991d67, type: 2}
-  - {fileID: 11400000, guid: 5acc1ffbce7bd0c409a0342e15215d50, type: 2}
-  - {fileID: 11400000, guid: 59609853a6e672d4abd55b53c68e65af, type: 2}
-  - {fileID: 11400000, guid: 6a24218840e116d40b64a290049b16af, type: 2}
-  - {fileID: 11400000, guid: 86a4af915a0876a408fc4fda70d973cc, type: 2}
-  - {fileID: 11400000, guid: 7cdb2fb5f9d4f3041b9553581c59cfa0, type: 2}
+  - {fileID: 11400000, guid: 511cd7b89a1f5cf4198da4af01bd27a8, type: 2}
+  - {fileID: 11400000, guid: 0e67eb5db68e26b47bf6a7349cd1c52a, type: 2}
+  - {fileID: 11400000, guid: 70d06aaebb18c59448ed60ec31574a01, type: 2}
+  - {fileID: 11400000, guid: e9c3b6b539992c14eab309743890d51a, type: 2}
+  - {fileID: 11400000, guid: d447bfb8809c4f74194129e509bc50a9, type: 2}
+  - {fileID: 11400000, guid: 42689cfa28a359046a2cd282c73e01f8, type: 2}
+  - {fileID: 11400000, guid: de21e968c8820024781d8c9ee4c49615, type: 2}
+  - {fileID: 11400000, guid: d1a5fe6b20ae51e4f8c73b4984ba6695, type: 2}
+  - {fileID: 11400000, guid: 6a184691135bf3948bb1e41546dad32f, type: 2}
+  - {fileID: 11400000, guid: d3c54c2d87b79f3488976a0eee55da12, type: 2}
+  - {fileID: 11400000, guid: 27f8cde4ac0d4c74da300245be5c0f04, type: 2}
+  - {fileID: 11400000, guid: ed71e1c81e37bdf47a4dd3d76ce8cd01, type: 2}
+  - {fileID: 11400000, guid: e28aa6ca64e612148afee98435e574de, type: 2}
+  - {fileID: 11400000, guid: 2e5f662ce41c2544e8d3e9fb697d4e09, type: 2}
+  - {fileID: 11400000, guid: f119c19f39d39f24a90cd2adce3579ba, type: 2}
+  - {fileID: 11400000, guid: 1df8c7dd44b33a14fb2d0552406eef17, type: 2}

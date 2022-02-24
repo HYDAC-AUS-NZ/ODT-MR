@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using Microsoft.MixedReality.Toolkit;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
+using UnityEngine.Android;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
@@ -48,13 +49,25 @@ namespace HYDACDB
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
+                
+#if UNITY_ANDROID
+                if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+                    Permission.RequestUserPermission(Permission.Microphone);
+#endif
+                
                 // Position user by first re-positioning and re-orienting room space and then the camera
                 var cameraTransform = Camera.main.transform;
                 
+                var position = localSpawnPoint.position;
+                var rotation = localSpawnPoint.rotation;
                 var roomSpaceTransform = cameraTransform.parent;
-                roomSpaceTransform.position = localSpawnPoint.position;
-                roomSpaceTransform.rotation = localSpawnPoint.rotation;
-            
+                
+                MixedRealityPlayspace.Position = position;
+                MixedRealityPlayspace.Rotation = rotation;
+                
+                roomSpaceTransform.position = position;
+                roomSpaceTransform.rotation = rotation;
+                
                 cameraTransform.localPosition = Vector3.zero;
                 cameraTransform.localRotation = Quaternion.identity;
                 

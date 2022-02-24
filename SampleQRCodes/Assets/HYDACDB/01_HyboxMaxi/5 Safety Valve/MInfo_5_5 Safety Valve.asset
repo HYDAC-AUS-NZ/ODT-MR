@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renameOnValidate: 0
   ID: 5
+  productID: 
   iname: Safety Valve
   description: 'Description:'
-  IsViewable: 1
   isStatic: 0
-  HasVideo: 0
   highPolyReference:
     m_AssetGUID: fcc2a887359d06b47bea00d8276f262f
     m_SubObjectName: 
@@ -29,11 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoReference:
-    m_AssetGUID: 68b29c594c03fcb418a620f5cc6dc2a6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/i5WSAhGsGC0
   subModules:
   - {fileID: 11400000, guid: 507b5afc3db0a4e499b21a9d87bad374, type: 2}
   - {fileID: 11400000, guid: 284e088d1ba80e74090aed1af475670c, type: 2}

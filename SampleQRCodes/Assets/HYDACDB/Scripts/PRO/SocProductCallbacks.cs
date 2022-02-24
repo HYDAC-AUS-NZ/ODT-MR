@@ -15,10 +15,6 @@ namespace HYDACDB.PRO
         [Space]
         public SModuleInfo[] Modules;
 
-        public SCatalogueInfo[] Catalogue { get; private set; }
-        
-        // Current selected machine from catalogue
-        public SCatalogueInfo CurrentCatalogue { get; private set; }
         // Current selected module
         public SModuleInfo CurrentModule { get; private set; }
         // Current selected subModule
@@ -27,21 +23,7 @@ namespace HYDACDB.PRO
 
         private void Awake()
         {
-            CurrentCatalogue = null;
             CurrentModule = null;
-        }
-        
-
-        internal void SetCatalogue(SCatalogueInfo[] infos)
-        {
-            Catalogue = infos;
-        }
-        
-        
-        public event Action<bool> EToggleCatalogueUI;
-        public void InvokeToggleCatalogueUI(bool toggle)
-        {
-            EToggleCatalogueUI?.Invoke(toggle);
         }
 
 
@@ -49,7 +31,6 @@ namespace HYDACDB.PRO
         public event Action<SCatalogueInfo> EAssemblySelected;
         internal void OnProductSelected(SCatalogueInfo info)
         {
-            CurrentCatalogue = info;
             EAssemblySelected?.Invoke(info);
         }
 
@@ -95,6 +76,16 @@ namespace HYDACDB.PRO
             Debug.Log("#SocAssemblyEvents#------------OnVideoPlayToggle");
 
             EVideoPlay.Invoke();
+        }
+
+
+        // Toggle Tutorial Video
+        public event Action<bool> EToggleTutorial;
+        public void OnTutorialToggle(bool toggle)
+        {
+            Debug.Log("#SocAssemblyEvents#------------OnTutorialToggle");
+
+            EToggleTutorial?.Invoke(toggle);
         }
     }
 }

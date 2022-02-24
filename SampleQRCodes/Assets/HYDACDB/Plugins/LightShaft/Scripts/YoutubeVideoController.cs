@@ -200,11 +200,13 @@ namespace LightShaft.Scripts
             {
                 showingVolume = false;
                 volumeSlider.gameObject.SetActive(false);
+                playbackSlider.gameObject.SetActive(true);
             }
             else
             {
                 showingVolume = true;
                 volumeSlider.gameObject.SetActive(true);
+                playbackSlider.gameObject.SetActive(false);
             }
         }
 

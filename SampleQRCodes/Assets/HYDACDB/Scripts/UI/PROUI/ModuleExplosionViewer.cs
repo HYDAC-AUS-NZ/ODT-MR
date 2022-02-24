@@ -17,8 +17,7 @@ namespace HYDACDB.UI
         [Header("ModuleViewer Members")]
         [SerializeField] private Transform moduleSpawnPoint;
         [SerializeField] private Interactable explosionButton;
-        [Range(0, 1)]
-        [SerializeField] private float rotateAmount;
+        [SerializeField] private Interactable rotationButton;
         private Transform _currentModuleTransform;
         private bool isRotateButtonPressed;
 
@@ -37,6 +36,7 @@ namespace HYDACDB.UI
             StartCoroutine(LoadModuleModel(newModule));
 
             explosionButton.gameObject.SetActive(!newModule.isStatic);
+            rotationButton.gameObject.SetActive(true);
         }
         
         
@@ -53,8 +53,14 @@ namespace HYDACDB.UI
             _currentModuleTransform = modelLoadTask.Result.transform;
             _currentModuleTransform.localPosition = new Vector3(0, 0, 0);
             _currentModuleInfo = _currentModuleTransform.GetComponent<ProductFModule>().Info as SModuleInfo;
-            
-            
+
+            subModuleCanvas.enabled = !newModule.isStatic;
+
+            if (newModule.isStatic)
+            {
+                yield break;
+            }
+
             // SUBMODULE LIST LOADING
             //=======================
 
@@ -64,12 +70,6 @@ namespace HYDACDB.UI
                     Destroy(uiButton.gameObject);
             
                 _subModuleUIs = null;
-            }
-
-            if (newModule.isStatic)
-            {
-                subModuleCanvas.enabled = false;
-                yield break;
             }
             
             subModuleCanvas.enabled = true;
@@ -89,19 +89,25 @@ namespace HYDACDB.UI
             _subModuleUIs = uiButtons.ToArray();
         }
 
-        public void StartModelRotation()
+        public void StartModelRotation(float rotateAmount)
         {
             StopAllCoroutines();
             
             isRotateButtonPressed = true;
-            StartCoroutine(RotateModel());
+            StartCoroutine(RotateModelContinously(rotateAmount));
         }
 
-        IEnumerator RotateModel()
+        public void RotateModel(float rotateAmount)
+        {
+            moduleSpawnPoint.Rotate(Vector3.up, rotateAmount);
+        }
+
+
+        IEnumerator RotateModelContinously(float rotateAmount)
         {
             while (isRotateButtonPressed)
             {
-                moduleSpawnPoint.Rotate(Vector3.up, rotateAmount);
+                moduleSpawnPoint.Rotate(Vector3.up, rotateAmount * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
             }
         }

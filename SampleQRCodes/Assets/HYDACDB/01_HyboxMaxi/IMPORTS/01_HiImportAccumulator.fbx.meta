@@ -3,54 +3,9 @@ guid: bde6bb17d4a35be47ae3c6bcc1efb9b8
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-11
-    second: {fileID: 2100000, guid: c2912418959bc3d449cf8014dc071719, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-13
-    second: {fileID: 2100000, guid: c2912418959bc3d449cf8014dc071719, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-198
-    second: {fileID: 2100000, guid: 9d793e1b19a797d408543b6fa3016705, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-2
-    second: {fileID: 2100000, guid: 0ce48ffa7d2baf148b6e4d3beee68a15, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-3
-    second: {fileID: 2100000, guid: e0fda2d73970d62438751d9d06ea8e06, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-6
-    second: {fileID: 2100000, guid: e0fda2d73970d62438751d9d06ea8e06, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-7
-    second: {fileID: 2100000, guid: d82372b688d065e4bbfb5af67b6f2503, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: color-78
-    second: {fileID: 2100000, guid: 1659f39690b65944eb59f66fbda73984, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ral-3003 hydac official color
-    second: {fileID: 2100000, guid: c6e9d6abd90491f4490a95856362d1c1, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -90,7 +45,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renameOnValidate: 0
   ID: 2
+  productID: 6063163
   iname: "DCV \u2013 (Directional Control Valve)"
   description: Module Description
-  IsViewable: 1
   isStatic: 0
-  HasVideo: 0
   highPolyReference:
     m_AssetGUID: fcdd83ed505266143b4fc7da5d278520
     m_SubObjectName: 
@@ -29,11 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoReference:
-    m_AssetGUID: 68b29c594c03fcb418a620f5cc6dc2a6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/2heTpYd0-OM
   subModules:
   - {fileID: 11400000, guid: 231ae948101e7354584a31721ff754aa, type: 2}
   - {fileID: 11400000, guid: a9a4b05d4c9436c47bd3d3c0597530fd, type: 2}

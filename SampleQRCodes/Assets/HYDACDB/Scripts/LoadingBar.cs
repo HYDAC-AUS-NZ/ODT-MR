@@ -8,7 +8,7 @@ namespace HYDACDB
     {
         public static LoadingBar Instance;
 
-        [SerializeField] private GameObject loadingUI;
+        [SerializeField] private Canvas loadingUI;
         [SerializeField] private Slider loadingBar;
         [SerializeField] private TextMeshProUGUI loadingText;
 
@@ -18,7 +18,7 @@ namespace HYDACDB
                 Destroy(Instance);
             Instance = this;
             
-            loadingUI.SetActive(false);
+            loadingUI.enabled = false;
         
             loadingBar.minValue = 0;
             loadingBar.maxValue = 100;
@@ -27,7 +27,7 @@ namespace HYDACDB
 
         public void StartLoading(string text)
         {
-            loadingUI.SetActive(true);
+            loadingUI.enabled = true;
             loadingText.text = text;
             
             loadingBar.value = 0;
@@ -36,7 +36,7 @@ namespace HYDACDB
         
         public void StopLoading()
         {
-            loadingUI.SetActive(false);
+            loadingUI.enabled = false;
         }
         
         

@@ -4,6 +4,8 @@ using LightShaft.Scripts;
 using Microsoft.MixedReality.Toolkit.UI;
 
 using HYDACDB.INFO;
+//using HYDAC.NET;
+using UnityEngine.UI;
 
 namespace HYDACDB.UI
 {
@@ -16,7 +18,11 @@ namespace HYDACDB.UI
         [SerializeField] private string placeHolderVideoURL;
         private void Start()
         {
-            //playbackButton.IsInteractive = PlayerPrefs.GetInt(NetPlayerProperties.PLAYERPROPS_ROLE) == 0;
+            //var check = PlayerPrefs.GetInt(NetPlayerProperties.PLAYERPROPS_ROLE) == 0;
+            
+            //playbackButton.IsInteractive = check;
+            
+            //videocontroller.playbackSlider.interactable = check;
         }
 
         protected override void OnEnable()
@@ -52,7 +58,9 @@ namespace HYDACDB.UI
             //playbackButton.IsInteractive = PlayerPrefs.GetInt(NetPlayerProperties.PLAYERPROPS_ROLE) == 0;
             
             videoPlayer.PreLoadVideo((newModule.VideoURL.Equals("")) ? placeHolderVideoURL :  newModule.VideoURL);
-            
+
+            videocontroller.ChangeVolume(videocontroller.volumeSlider.value);
+
             videocontroller.Play();
             videocontroller.Pause();
         }

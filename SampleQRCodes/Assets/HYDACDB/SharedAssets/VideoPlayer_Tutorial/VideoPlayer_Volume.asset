@@ -13,26 +13,42 @@ MonoBehaviour:
   m_Name: VideoPlayer_Volume
   m_EditorClassIdentifier: 
   definitions:
-  - ClassName: InteractableColorTheme
-    AssemblyQualifiedName: Microsoft.MixedReality.Toolkit.UI.InteractableColorTheme,
+  - ClassName: InteractableTextureTheme
+    AssemblyQualifiedName: Microsoft.MixedReality.Toolkit.UI.InteractableTextureTheme,
       Microsoft.MixedReality.Toolkit.SDK, Version=2.7.2.0, Culture=neutral, PublicKeyToken=null
     stateProperties:
-    - name: Color
-      type: 2
+    - name: Texture
+      type: 9
       values:
       - Name: 
         String: 
         Bool: 0
         Int: 0
         Float: 0
-        Texture: {fileID: 0}
+        Texture: {fileID: 2800000, guid: 371bfd9dc37ce804d83220e5ee7fb912, type: 3}
         Material: {fileID: 0}
         Shader: {fileID: 0}
         GameObject: {fileID: 0}
         Vector2: {x: 0, y: 0}
         Vector3: {x: 0, y: 0, z: 0}
         Vector4: {x: 0, y: 0, z: 0, w: 0}
-        Color: {r: 0.11974899, g: 0.12071315, b: 0.12264148, a: 1}
+        Color: {r: 0, g: 0, b: 0, a: 0}
+        Quaternion: {x: 0, y: 0, z: 0, w: 0}
+        AudioClip: {fileID: 0}
+        Animation: {fileID: 0}
+      - Name: 
+        String: 
+        Bool: 0
+        Int: 0
+        Float: 0
+        Texture: {fileID: 2800000, guid: 558377b1579d6c74ea366bde622711ad, type: 3}
+        Material: {fileID: 0}
+        Shader: {fileID: 0}
+        GameObject: {fileID: 0}
+        Vector2: {x: 0, y: 0}
+        Vector3: {x: 0, y: 0, z: 0}
+        Vector4: {x: 0, y: 0, z: 0, w: 0}
+        Color: {r: 0, g: 0, b: 0, a: 0}
         Quaternion: {x: 0, y: 0, z: 0, w: 0}
         AudioClip: {fileID: 0}
         Animation: {fileID: 0}
@@ -48,23 +64,7 @@ MonoBehaviour:
         Vector2: {x: 0, y: 0}
         Vector3: {x: 0, y: 0, z: 0}
         Vector4: {x: 0, y: 0, z: 0, w: 0}
-        Color: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
-        Quaternion: {x: 0, y: 0, z: 0, w: 0}
-        AudioClip: {fileID: 0}
-        Animation: {fileID: 0}
-      - Name: 
-        String: 
-        Bool: 0
-        Int: 0
-        Float: 0
-        Texture: {fileID: 0}
-        Material: {fileID: 0}
-        Shader: {fileID: 0}
-        GameObject: {fileID: 0}
-        Vector2: {x: 0, y: 0}
-        Vector3: {x: 0, y: 0, z: 0}
-        Vector4: {x: 0, y: 0, z: 0, w: 0}
-        Color: {r: 1, g: 1, b: 1, a: 1}
+        Color: {r: 0, g: 0, b: 0, a: 0}
         Quaternion: {x: 0, y: 0, z: 0, w: 0}
         AudioClip: {fileID: 0}
         Animation: {fileID: 0}
@@ -98,19 +98,19 @@ MonoBehaviour:
         Vector2: {x: 0, y: 0}
         Vector3: {x: 0, y: 0, z: 0}
         Vector4: {x: 0, y: 0, z: 0, w: 0}
-        Color: {r: 1, g: 1, b: 1, a: 1}
+        Color: {r: 0, g: 0, b: 0, a: 0}
         Quaternion: {x: 0, y: 0, z: 0, w: 0}
         AudioClip: {fileID: 0}
         Animation: {fileID: 0}
       targetShader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
-      shaderPropertyName: _Color
+      shaderPropertyName: _MainTex
       PropId: -1
       ShaderOptions: []
       ShaderOptionNames: []
       ShaderName: 
     customProperties: []
     easing:
-      Enabled: 1
+      Enabled: 0
       Curve:
         serializedVersion: 2
         m_Curve:
@@ -123,15 +123,6 @@ MonoBehaviour:
           weightedMode: 0
           inWeight: 0
           outWeight: 0
-        - serializedVersion: 3
-          time: 0.5136921
-          value: 1.03379
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
           value: 1

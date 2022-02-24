@@ -7,6 +7,7 @@ using HYDACDB.INFO;
 
 public class SubModuleListButton : MonoBehaviour
 {
+    //[SerializeField] private SocProductNetWrapper productNetWrapper;
     [SerializeField] private TextMeshProUGUI subModuleTitleTxt;
     [SerializeField] private Button button;
 

@@ -142,9 +142,10 @@ namespace HYDACDB.PRO.Editor
                             continue;
                         }
                     }
-                    catch
+                    catch(Exception e)
                     {
                         Debug.LogError("FocusedModuleEditor#--------Error: " + subModuleTransform.name + " - ID");
+                        Debug.LogError($"FocusedModuleEditor#--------Error: {e}");
                         return;
                     }
 

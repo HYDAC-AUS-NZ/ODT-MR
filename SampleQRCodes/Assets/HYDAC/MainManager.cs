@@ -13,31 +13,36 @@ using QRCode = Microsoft.MixedReality.QR.QRCode;
 public class MainManager : MonoBehaviour
 {
     [SerializeField] private SocProductCallbacks productCallbacks;
-    [SerializeField] private QRCodesManager _qrCodesManager;
+    [SerializeField] private QRCodesManager qrCodesManager;
 
     private IList<IResourceLocation> _productAssetsLocations = new List<IResourceLocation>();
     
     private void OnEnable()
     {
-        productCallbacks.EAssemblySelected += OnProductSelected;
+        //productCallbacks.EAssemblySelected += OnProductSelected;
         
-        _qrCodesManager.QRCodeUpdated += OnQRCodeUpdated;
-        _qrCodesManager.QRCodeAdded += OnQRCodeAdded;
-        _qrCodesManager.QRCodesTrackingStateChanged += OnQRCodesTrackingStateChanged;
-        _qrCodesManager.QRCodeRemoved += OnQRCodeRemoved;
+        qrCodesManager.QRCodeUpdated += OnQRCodeUpdated;
+        qrCodesManager.QRCodeAdded += OnQRCodeAdded;
+        qrCodesManager.QRCodesTrackingStateChanged += OnQRCodesTrackingStateChanged;
+        qrCodesManager.QRCodeRemoved += OnQRCodeRemoved;
     }
 
     private void OnDisable()
     {
-        productCallbacks.EAssemblySelected += OnProductSelected;
+        //productCallbacks.EAssemblySelected += OnProductSelected;
         
-        _qrCodesManager.QRCodeUpdated -= OnQRCodeUpdated;
-        _qrCodesManager.QRCodeAdded -= OnQRCodeAdded;
-        _qrCodesManager.QRCodesTrackingStateChanged -= OnQRCodesTrackingStateChanged;
-        _qrCodesManager.QRCodeRemoved -= OnQRCodeRemoved;
+        qrCodesManager.QRCodeUpdated -= OnQRCodeUpdated;
+        qrCodesManager.QRCodeAdded -= OnQRCodeAdded;
+        qrCodesManager.QRCodesTrackingStateChanged -= OnQRCodesTrackingStateChanged;
+        qrCodesManager.QRCodeRemoved -= OnQRCodeRemoved;
     }
-    
-    
+
+
+    private void Start()
+    {
+    }
+
+
     private void OnQRCodeRemoved(object sender, QRCodeEventArgs<QRCode> e)
     {
         Debug.Log($"#MainManager#-------------QR Removed: {e.Data.Data}");

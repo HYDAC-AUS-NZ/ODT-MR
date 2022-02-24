@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renameOnValidate: 0
   ID: 4
+  productID: 3108660
   iname: Cooler
   description: 'Description:'
-  IsViewable: 1
   isStatic: 0
-  HasVideo: 0
   highPolyReference:
     m_AssetGUID: 6e98bbdf5265be744acfc78f620face3
     m_SubObjectName: 
@@ -29,11 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoReference:
-    m_AssetGUID: 68b29c594c03fcb418a620f5cc6dc2a6
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/eCHYKhDNqPs
   subModules:
   - {fileID: 11400000, guid: da4a8486ff733cf41b2f82131797a014, type: 2}
   - {fileID: 11400000, guid: 96a42859f87203b45a76172fb7256185, type: 2}
