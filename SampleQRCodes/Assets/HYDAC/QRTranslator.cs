@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -9,12 +8,13 @@ using HYDACDB.PRO;
 
 namespace HYDAC
 {
-    public class QRTransalator : MonoBehaviour
+    public class QRTranslator : MonoBehaviour
     {
+        public int DictionaryCount = 0;
+        public GameObject qrCodePrefab;
+
         [SerializeField] private SocQRCallBacks qrCallbacks;
         [SerializeField] private SocProductCallbacks productCallbacks;
-        
-        public GameObject qrCodePrefab;
 
         private System.Collections.Generic.SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
         private bool clearExisting = false;
@@ -42,7 +42,7 @@ namespace HYDAC
         // Use this for initialization
         void Start()
         {
-            Debug.Log("QRCodesVisualizer start");
+            Debug.Log("QRTranslator start");
             qrCodesObjectsList = new SortedDictionary<System.Guid, GameObject>();
 
             QRCodesManager.Instance.QRCodesTrackingStateChanged += Instance_QRCodesTrackingStateChanged;
@@ -59,19 +59,6 @@ namespace HYDAC
             }
         }
 
-        private void OnQRCodeClicked(string qrData)
-        {
-            var partID = qrData.Substring(qrData.LastIndexOf("hydacmr", StringComparison.Ordinal) + 1);
-            
-            
-        }
-
-        private void OnQRCodeClosed(Microsoft.MixedReality.QR.QRCode qrCode)
-        {
-            Destroy(qrCodesObjectsList[qrCode.Id]);
-            qrCodesObjectsList.Remove(qrCode.Id);
-        }
-
         private void Instance_QRCodesTrackingStateChanged(object sender, bool status)
         {
             if (!status)
@@ -82,7 +69,7 @@ namespace HYDAC
 
         private void Instance_QRCodeAdded(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
-            Debug.Log("QRCodesVisualizer Instance_QRCodeAdded");
+            Debug.Log("#QRTranslator#-----------QRCodeAdded");
 
             lock (pendingActions)
             {
@@ -92,7 +79,7 @@ namespace HYDAC
 
         private void Instance_QRCodeUpdated(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
-            Debug.Log("QRCodesVisualizer Instance_QRCodeUpdated");
+            Debug.Log("#QRTranslator#-----------QRCodeUpdated");
 
             lock (pendingActions)
             {
@@ -102,7 +89,7 @@ namespace HYDAC
 
         private void Instance_QRCodeRemoved(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
-            Debug.Log("QRCodesVisualizer Instance_QRCodeRemoved");
+            Debug.Log("#QRTranslator#-----------QRCodeRemoved");
 
             lock (pendingActions)
             {
@@ -123,6 +110,8 @@ namespace HYDAC
                         qrCodeObject.GetComponent<SpatialGraphNodeTracker>().Id = action.qrCode.SpatialGraphNodeId;
                         qrCodeObject.GetComponent<QRCode>().qrCode = action.qrCode;
                         qrCodesObjectsList.Add(action.qrCode.Id, qrCodeObject);
+
+
                     }
                     else if (action.type == ActionData.Type.Updated)
                     {
@@ -160,6 +149,31 @@ namespace HYDAC
         void Update()
         {
             HandleEvents();
+
+            DictionaryCount = qrCodesObjectsList.Count;
+        }
+
+
+        private void OnQRCodeClicked(string qrData)
+        {
+            Debug.Log("#QRTranslator#-----------QR code Clicked");
+
+            
+        }
+
+        private void OnQRCodeClosed(Microsoft.MixedReality.QR.QRCode qrCode)
+        {
+            Debug.Log("#QRTranslator#-----------Deleting QR code");
+
+            lock (pendingActions)
+            {
+                pendingActions.Enqueue(new ActionData(ActionData.Type.Removed, qrCode));
+            }
+        }
+
+        public void FlushQRDictionary()
+        {
+            qrCodesObjectsList.Clear();
         }
     }
 }

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 1e6870cda78258c498621190532fd55f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - HydacLogo: {fileID: 2800000, guid: 3a6b653bc1459b94aaecd1d79bc52d93, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
