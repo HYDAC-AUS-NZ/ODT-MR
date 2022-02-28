@@ -6,7 +6,6 @@ using UnityEngine.Serialization;
 
 namespace HYDACDB.INFO
 {
-    
     public class SCatalogueInfo : ProductInfo
     {
         public bool isLoadable;

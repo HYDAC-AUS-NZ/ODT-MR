@@ -7,6 +7,7 @@ using HYDACDB.PRO;
 using QRTracking;
 
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using QRCode = Microsoft.MixedReality.QR.QRCode;
 
@@ -14,9 +15,12 @@ public class MainManager : MonoBehaviour
 {
     [SerializeField] private SocProductCallbacks productCallbacks;
     [SerializeField] private QRCodesManager qrCodesManager;
+    [SerializeField] private string catalogueLabel;
 
     private IList<IResourceLocation> _productAssetsLocations = new List<IResourceLocation>();
-    
+    private List<SCatalogueInfo> _catalogue = new List<SCatalogueInfo>();
+
+
     private void OnEnable()
     {
         //productCallbacks.EAssemblySelected += OnProductSelected;
@@ -38,8 +42,25 @@ public class MainManager : MonoBehaviour
     }
 
 
-    private void Start()
+    private async void Start()
     {
+        await FetchCatalogue();
+
+        Debug.Log("#MainManager#-------------Starting QR Scanning");
+
+        qrCodesManager.StartQRTracking();
+    }
+
+    private async Task FetchCatalogue()
+    {
+        // Load Catalogue
+        _catalogue = new List<SCatalogueInfo>();
+
+        await Addressables.LoadAssetsAsync<SCatalogueInfo>(catalogueLabel, (result) =>
+        {
+            Debug.Log("#MainManager#-------------Catalogue found: " + result.iname);
+            _catalogue.Add(result);
+        }).Task;
     }
 
 

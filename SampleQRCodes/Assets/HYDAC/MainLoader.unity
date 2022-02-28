@@ -4788,6 +4788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   productCallbacks: {fileID: 11400000, guid: ba06f5fa1a198854786cff79e379e528, type: 2}
   qrCodesManager: {fileID: 2049860581}
+  catalogueLabel: Catalogue
 --- !u!4 &1868591347
 Transform:
   m_ObjectHideFlags: 0
@@ -5164,7 +5165,7 @@ PrefabInstance:
     - target: {fileID: 4908586973252628864, guid: 9ceaea61be84db74ca74378863e9c03e,
         type: 3}
       propertyPath: AutoStartQRTracking
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5731539863259288648, guid: 9ceaea61be84db74ca74378863e9c03e,
         type: 3}
@@ -5191,10 +5192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132f6453673cc5c488ff08b5fb5431df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
-  productCallbacks: {fileID: 11400000, guid: ba06f5fa1a198854786cff79e379e528, type: 2}
+  DictionaryCount: 0
   qrCodePrefab: {fileID: 1200717071578424, guid: c1ee661b6abcfb94a99177d12a3255ef,
     type: 3}
+  qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
+  productCallbacks: {fileID: 11400000, guid: ba06f5fa1a198854786cff79e379e528, type: 2}
 --- !u!1 &2112227451
 GameObject:
   m_ObjectHideFlags: 0
