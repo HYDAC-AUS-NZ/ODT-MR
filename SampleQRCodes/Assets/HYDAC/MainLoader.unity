@@ -4787,7 +4787,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   productCallbacks: {fileID: 11400000, guid: ba06f5fa1a198854786cff79e379e528, type: 2}
-  qrCodesManager: {fileID: 2049860581}
   catalogueLabel: Catalogue
 --- !u!4 &1868591347
 Transform:
@@ -5053,18 +5052,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047515127}
   m_Mesh: {fileID: 4300010, guid: b566bbce04d66f4428421e81a3af0299, type: 3}
---- !u!114 &2049860581 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4908586973252628864, guid: 9ceaea61be84db74ca74378863e9c03e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2078260303}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078260304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2f5e2f7e55e6c4db3da309ff799c5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2075900293
 GameObject:
   m_ObjectHideFlags: 0

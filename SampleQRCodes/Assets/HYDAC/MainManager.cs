@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using HYDACDB;
 using HYDACDB.ADD;
@@ -14,7 +15,6 @@ using QRCode = Microsoft.MixedReality.QR.QRCode;
 public class MainManager : MonoBehaviour
 {
     [SerializeField] private SocProductCallbacks productCallbacks;
-    [SerializeField] private QRCodesManager qrCodesManager;
     [SerializeField] private string catalogueLabel;
 
     private IList<IResourceLocation> _productAssetsLocations = new List<IResourceLocation>();
@@ -24,112 +24,52 @@ public class MainManager : MonoBehaviour
     private void OnEnable()
     {
         //productCallbacks.EAssemblySelected += OnProductSelected;
-        
-        qrCodesManager.QRCodeUpdated += OnQRCodeUpdated;
-        qrCodesManager.QRCodeAdded += OnQRCodeAdded;
-        qrCodesManager.QRCodesTrackingStateChanged += OnQRCodesTrackingStateChanged;
-        qrCodesManager.QRCodeRemoved += OnQRCodeRemoved;
     }
 
     private void OnDisable()
     {
         //productCallbacks.EAssemblySelected += OnProductSelected;
-        
-        qrCodesManager.QRCodeUpdated -= OnQRCodeUpdated;
-        qrCodesManager.QRCodeAdded -= OnQRCodeAdded;
-        qrCodesManager.QRCodesTrackingStateChanged -= OnQRCodesTrackingStateChanged;
-        qrCodesManager.QRCodeRemoved -= OnQRCodeRemoved;
     }
 
 
     private async void Start()
     {
-        await FetchCatalogue();
+        await CatalogueManager.FetchCatalogue(catalogueLabel);
 
         Debug.Log("#MainManager#-------------Starting QR Scanning");
 
-        qrCodesManager.StartQRTracking();
+        QRCodesManager.Instance.StartQRTracking();
     }
+}
 
-    private async Task FetchCatalogue()
+public static class CatalogueManager
+{
+    private static List<SCatalogueInfo> _catalogue = new List<SCatalogueInfo>();
+
+    public static async Task FetchCatalogue(string catalogueLabel)
     {
         // Load Catalogue
         _catalogue = new List<SCatalogueInfo>();
 
         await Addressables.LoadAssetsAsync<SCatalogueInfo>(catalogueLabel, (result) =>
         {
-            Debug.Log("#MainManager#-------------Catalogue found: " + result.iname);
+            Debug.Log("#CatalogueManager#-------------Catalogue found: " + result.iname);
             _catalogue.Add(result);
         }).Task;
     }
 
-
-    private void OnQRCodeRemoved(object sender, QRCodeEventArgs<QRCode> e)
+    public static SCatalogueInfo[] GetFetchedCatalogue()
     {
-        Debug.Log($"#MainManager#-------------QR Removed: {e.Data.Data}");
+        if (_catalogue.Count > 0)
+        {
+            return _catalogue.ToArray();
+        }
+
+        return null;
     }
 
-    private void OnQRCodesTrackingStateChanged(object sender, bool e)
+    public static SCatalogueInfo GetProductInfo(string productID)
     {
-        Debug.Log($"#MainManager#-------------QRCodesTrackingStateChanged: {e}");
-    }
-
-    private void OnQRCodeAdded(object sender, QRCodeEventArgs<QRCode> e)
-    {
-        Debug.Log($"#MainManager#-------------QR Added: {e.Data.Data}");
-    }
-
-    private void OnQRCodeUpdated(object sender, QRCodeEventArgs<QRCode> e)
-    {
-        Debug.Log($"#MainManager#-------------QR Updated: {e.Data.Data}");
-    }
-
-
-
-    private void OnProductSelected(SCatalogueInfo info)
-    {
-        Debug.Log($"#MainManager#-------------Product Selected");
-        StartProcess(info);
-    }
-
-
-    private async void StartProcess(SCatalogueInfo info)
-    {
-        Debug.Log($"#MainManager#-------------Process Started");
-
-        await LoadProductAssets(info);
-        
-        Debug.Log($"#MainManager#-------------Completed Loading Assets");
-
-        QRCodesManager.Instance.StartQRTracking();
-    }
-    
-    
-    private async Task LoadProductAssets(SCatalogueInfo catalogueInfo)
-    {
-        LoadingBar.Instance.StartLoading($"Loading {catalogueInfo.iname} assets..Please wait");
-
-        // Load product dependencies
-        _productAssetsLocations = await AddressableLoader.LoadLabels(new string[] { catalogueInfo.ProductAssetsKey });
-
-        productCallbacks.OnProductSelected(catalogueInfo);
-
-        // // Get Modules of Assembly
-        // var productModules = _currentProduct.GetProductModules();
-        //
-        // SModuleInfo[] moduleInfos = new SModuleInfo[productModules.Length];
-        //
-        // for (int i = 0; i < productModules.Length; i++)
-        // {
-        //     // Register for the module OnClick event
-        //     productModules[i].EOnClicked += OnModuleSelect;
-        //
-        //     moduleInfos[i] = (SModuleInfo)productModules[i].Info;
-        //
-        //     // Set module infos in AssemblyEvents sock
-        //     productCallbacks.Modules = moduleInfos;
-        // }
-            
-        LoadingBar.Instance.StopLoading();
+        return _catalogue.Where(i => i.productID.Equals(productID)).FirstOrDefault();
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using HYDAC;
+using HYDACDB.INFO;
 using QRTracking;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class CustomQRCode : MonoBehaviour
     [SerializeField] private string qrDataLabel;
 
     QRCode qrCode;
+    SCatalogueInfo catalogueInfo;
 
     // Use this for initialization
     void Start()
@@ -26,8 +28,10 @@ public class CustomQRCode : MonoBehaviour
         // Get Product Details
         var partID = qrData.Substring(qrData.LastIndexOf(qrDataLabel, StringComparison.Ordinal) + qrDataLabel.Length);
 
+        catalogueInfo = CatalogueManager.GetProductInfo(partID);
+
         urlText.text = qrData;
-        partName.text = partID;
+        partName.text = catalogueInfo.name;
     }
     
 
