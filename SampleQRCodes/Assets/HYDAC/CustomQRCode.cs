@@ -30,8 +30,11 @@ public class CustomQRCode : MonoBehaviour
 
         catalogueInfo = CatalogueManager.GetProductInfo(partID);
 
-        urlText.text = qrData;
-        partName.text = catalogueInfo.name;
+        if(catalogueInfo != null)
+        {
+            urlText.text = qrData;
+            partName.text = catalogueInfo.iname;
+        }
     }
     
 

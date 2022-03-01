@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 
 namespace HYDACDB.INFO
 {
+    [CreateAssetMenu(fileName = "CInfo", menuName = "InfoSocs/Catalogue")]
     public class SCatalogueInfo : ProductInfo
     {
         public bool isLoadable;

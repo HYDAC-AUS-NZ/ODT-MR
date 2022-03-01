@@ -3,7 +3,7 @@ using UnityEngine.AddressableAssets;
 
 namespace HYDACDB.INFO
 {
-    [CreateAssetMenu(fileName = "ModuleInfo", menuName = "AssemblyInfos/Module")]
+    [CreateAssetMenu(fileName = "ModuleInfo", menuName = "InfoSocs/Module")]
     public class SModuleInfo : ProductInfo
     {
         public bool isStatic;

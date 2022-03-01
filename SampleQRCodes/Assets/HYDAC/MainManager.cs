@@ -70,6 +70,15 @@ public static class CatalogueManager
 
     public static SCatalogueInfo GetProductInfo(string productID)
     {
-        return _catalogue.Where(i => i.productID.Equals(productID)).FirstOrDefault();
+        var catalogue = _catalogue.Where(i => i.productID.Equals(productID)).FirstOrDefault();
+        
+        if(catalogue != null)
+        {
+            Debug.Log("#CatalogueManager#---------------Catalogue found");
+            return catalogue;
+        }
+
+        Debug.Log("#CatalogueManager#---------------Catalogue not found");
+        return null;
     }
 }
