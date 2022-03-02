@@ -6,6 +6,9 @@ using TMPro;
 using QRTracking;
 
 using HYDAC.INFO;
+using HYDAC.Audio;
+using Microsoft.MixedReality.Toolkit.UI;
+using Microsoft.MixedReality.Toolkit.Utilities;
 
 namespace HYDAC.QR
 { 
@@ -14,35 +17,89 @@ namespace HYDAC.QR
     {
         [SerializeField] private SocQRCallBacks qrCallBacks;
         [Space]
+        [SerializeField] private string qrDataLabel;
+        [Space]
         [SerializeField] private TextMeshPro partName;
         [SerializeField] private TextMeshPro urlText;
         [Space]
-        [SerializeField] private string qrDataLabel;
+        [SerializeField] private Interactable modelButton;
+        [SerializeField] private Interactable documentationButton;
+        [SerializeField] private Interactable videoButton;
+        [SerializeField] private Interactable closeButton;
 
         QRCode qrCode;
         SCatalogueInfo catalogueInfo;
+
+        private void OnEnable()
+        {
+            modelButton.OnClick.AddListener(OnModelButtonClicked);
+            documentationButton.OnClick.AddListener(OnDocumentationButtonClicked);
+            videoButton.OnClick.AddListener(OnVideoButtonClicked);
+            closeButton.OnClick.AddListener(OnCloseButtonClicked);
+        }
+
+        private void OnDisable()
+        {
+            modelButton.OnClick.RemoveListener(OnModelButtonClicked);
+            documentationButton.OnClick.RemoveListener(OnDocumentationButtonClicked);
+            videoButton.OnClick.RemoveListener(OnVideoButtonClicked);
+            closeButton.OnClick.RemoveListener(OnCloseButtonClicked);
+        }
+
 
         // Use this for initialization
         void Start()
         {
             qrCode = GetComponent<QRCode>();
 
-            var qrData = qrCode.qrCode.Data;
+            AudioManager.Instance.PlayClip(AudioManager.Instance.qrScanned);
 
+            SetupQRCode();
+        }
+
+        private void SetupQRCode()
+        {
             // Get Product Details
+            var qrData = qrCode.qrCode.Data;
             var partID = qrData.Substring(qrData.LastIndexOf(qrDataLabel, StringComparison.Ordinal) + qrDataLabel.Length);
-
             catalogueInfo = CatalogueManager.GetProductInfo(partID);
 
-            if(catalogueInfo != null)
+            if (catalogueInfo == null)
             {
-                urlText.text = qrData;
-                partName.text = catalogueInfo.iname;
+                Debug.LogError("#QRCodeManager#----------Product ID not found in Catalogue");
+                return;
             }
-        }
-    
 
-        public void UICloseButtonClicked()
+            urlText.text = qrData;
+            partName.text = catalogueInfo.iname;
+
+            // Set Buttons
+            var assetsInfo = catalogueInfo.AssetsInfo;
+            modelButton.gameObject.SetActive(assetsInfo.hasModel);
+            documentationButton.gameObject.SetActive(assetsInfo.hasDocumentation);
+            videoButton.gameObject.SetActive(assetsInfo.hasVideo);
+
+            modelButton.gameObject.transform.parent.GetComponent<GridObjectCollection>().UpdateCollection();
+        }
+
+
+
+        private void OnModelButtonClicked()
+        {
+            qrCallBacks.InvokeUIQRModelToggle(modelButton.IsToggled, catalogueInfo.AssetsInfo);
+        }
+
+        private void OnDocumentationButtonClicked()
+        {
+            qrCallBacks.InvokeUIQRDocumentationToggle(documentationButton.IsToggled, catalogueInfo.AssetsInfo);
+        }
+
+        private void OnVideoButtonClicked()
+        {
+            qrCallBacks.InvokeUIQRVideoToggle(videoButton.IsToggled, catalogueInfo.AssetsInfo);
+        }
+
+        private void OnCloseButtonClicked()
         {
             qrCallBacks.InvokeQRCodeClosed(qrCode.qrCode);
         }

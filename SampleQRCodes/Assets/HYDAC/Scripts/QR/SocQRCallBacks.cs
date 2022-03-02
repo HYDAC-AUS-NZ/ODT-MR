@@ -1,3 +1,4 @@
+using HYDAC.INFO;
 using System;
 using UnityEngine;
 
@@ -9,17 +10,30 @@ namespace HYDAC.QR
     public class SocQRCallBacks : ScriptableObject
     {
         public Action<QRCode> EOnQRCodeClosed;
-
         public void InvokeQRCodeClosed(QRCode qr)
         {
             EOnQRCodeClosed?.Invoke(qr);
         }
     
-        public Action<string> EOnQRCodeClicked;
 
-        public void InvokeQRCodeClicked(string qrData)
+        public Action<bool, SAssetsInfo> EOnQRModelToggle;
+        public void InvokeUIQRModelToggle(bool toggle, SAssetsInfo assetsInfo)
         {
-            EOnQRCodeClicked?.Invoke(qrData);
+            EOnQRModelToggle?.Invoke(toggle, assetsInfo);
+        }
+
+
+        public Action<bool, SAssetsInfo> EOnQRDocumentationToggle;
+        public void InvokeUIQRDocumentationToggle(bool toggle, SAssetsInfo assetsInfo)
+        {
+            EOnQRDocumentationToggle?.Invoke(toggle, assetsInfo);
+        }
+
+
+        public Action<bool, SAssetsInfo> EOnQRVideoToggle;
+        public void InvokeUIQRVideoToggle(bool toggle, SAssetsInfo assetsInfo)
+        {
+            EOnQRVideoToggle?.Invoke(toggle, assetsInfo);
         }
     }
 }

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a745c153fc04047a49375276219219, type: 3}
+  m_Name: AInfo_3262606
+  m_EditorClassIdentifier: 
+  hasSchematic: 0
+  hasModel: 1
+  hasDocumentation: 1
+  hasVideo: 1
+  schematicReference:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  modelReference:
+    m_AssetGUID: efa44476de9fb5746949ddc1283744b5
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  documentationReference:
+    m_AssetGUID: 125007f832152a04fa0657f3c43e63e0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  videoURL: https://youtu.be/WvqPoOyNog0

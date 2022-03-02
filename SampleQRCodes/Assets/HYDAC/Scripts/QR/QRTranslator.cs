@@ -48,7 +48,6 @@ namespace HYDAC.QR
             QRCodesManager.Instance.QRCodeRemoved += Instance_QRCodeRemoved;
             
             qrCallbacks.EOnQRCodeClosed += OnQRCodeClosed;
-            qrCallbacks.EOnQRCodeClicked += OnQRCodeClicked;
             
             if (qrCodePrefab == null)
             {
@@ -148,14 +147,6 @@ namespace HYDAC.QR
             HandleEvents();
 
             DictionaryCount = qrCodesObjectsList.Count;
-        }
-
-
-        private void OnQRCodeClicked(string qrData)
-        {
-            Debug.Log("#QRTranslator#-----------QR code Clicked");
-
-            
         }
 
         private void OnQRCodeClosed(Microsoft.MixedReality.QR.QRCode qrCode)

@@ -362,9 +362,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qrCallBacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
+  qrDataLabel: hydacmr
   partName: {fileID: 1739783112930677973}
   urlText: {fileID: 4555931624627855868}
-  qrDataLabel: hydacmr
+  modelButton: {fileID: 6917591181292972323}
+  documentationButton: {fileID: 6799386187109126640}
+  videoButton: {fileID: 3625700197302782296}
+  closeButton: {fileID: 6450415108449902042}
 --- !u!1 &1213812270178400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825983381894992584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.025, y: 0, z: 0}
+  m_LocalPosition: {x: 0.025, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 8516411189664066966}
@@ -1622,7 +1626,7 @@ Transform:
   - {fileID: 3252620118587136874}
   - {fileID: 7795158304662088217}
   m_Father: {fileID: 4130627450146922813}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8759097141856989658
 BoxCollider:
@@ -2316,7 +2320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b0e186e2c82324b83f3696c29cf697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showBackground: 1
+  showBackground: 0
   showHighlight: 0
   showConnector: 1
   tipState: 1
@@ -2326,12 +2330,12 @@ MonoBehaviour:
   pivot: {fileID: 944680369726169294}
   label: {fileID: 945505140498724812}
   contentParent: {fileID: 945585119589162876}
-  toolTipText: Radiatore
+  toolTipText: ' '
   backgroundPadding: {x: 0.025, y: 0.015}
   backgroundOffset: {x: 0, y: 0, z: 0}
   contentScale: 1
   fontSize: 30
-  attachPointType: 0
+  attachPointType: 8
   attachPointOffset: {x: 0, y: 0, z: 0}
   toolTipLine: {fileID: 905159411162057640}
 --- !u!114 &901359193670883146
@@ -2440,7 +2444,7 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: -0.12020426}
     rotation: {x: 0, y: 0, z: 0, w: 1}
   endPoint:
-    position: {x: -0.00043715612, y: -0.006649688, z: 0.0044243806}
+    position: {x: -0.00043715612, y: 0.00085031125, z: 0.0044243806}
     rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &904418957152186790
 MonoBehaviour:
@@ -2590,7 +2594,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0.00000000227109}
-  - {x: -0.00036367774, y: 0.005531984, z: -0.10368072}
+  - {x: -0.00036367774, y: -0.0007073878, z: -0.10368072}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.025
@@ -2703,7 +2707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8490033979647828726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2784,7 +2788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Radiatore
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a15c149b8c585f64c83622ed3a2b89eb, type: 2}
   m_sharedMaterial: {fileID: 830385235976933498, guid: a15c149b8c585f64c83622ed3a2b89eb,
@@ -2878,7 +2882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &939929783316048934
 Transform:
   m_ObjectHideFlags: 0
@@ -2888,7 +2892,7 @@ Transform:
   m_GameObject: {fileID: 945551502685216364}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.001}
-  m_LocalScale: {x: 0.025, y: 0.015, z: 1}
+  m_LocalScale: {x: -17865288, y: -17865266, z: 1}
   m_Children: []
   m_Father: {fileID: 942800758186982940}
   m_RootOrder: 5
@@ -2908,7 +2912,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945551502685216364}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3330,7 +3334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945585119589162876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2547b4dd088644d6aaf64f45df657c79, type: 3}
   m_Name: 
@@ -4641,7 +4645,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc2d9e3368a5ce749a079b643926da8a, type: 2}
+  - {fileID: 2100000, guid: dc80bd41950e6b74d9d82cd7f893651e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6043,9 +6047,9 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6674600228025855715}
   - {fileID: 1748017805672513686}
   - {fileID: 4370405371842152891}
-  - {fileID: 6674600228025855715}
   - {fileID: 4523710591330727320}
   m_Father: {fileID: 942800758186982940}
   m_RootOrder: 2
@@ -6063,6 +6067,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeList:
+  - Name: Documentation Button (2)
+    Offset: {x: 0, y: 0}
+    Radius: 0
+    Transform: {fileID: 6674600228025855715}
+    Colliders: []
   - Name: Documentation Button
     Offset: {x: 0, y: 0}
     Radius: 0
@@ -6072,11 +6081,6 @@ MonoBehaviour:
     Offset: {x: 0, y: 0}
     Radius: 0
     Transform: {fileID: 4370405371842152891}
-    Colliders: []
-  - Name: Documentation Button (2)
-    Offset: {x: 0, y: 0}
-    Radius: 0
-    Transform: {fileID: 6674600228025855715}
     Colliders: []
   - Name: CloseButton
     Offset: {x: 0, y: 0}
@@ -10228,7 +10232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8785813317723588515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.025, y: 0, z: 0}
+  m_LocalPosition: {x: -0.075, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 4753699873389363504}
@@ -10237,7 +10241,7 @@ Transform:
   - {fileID: 7837156101116441721}
   - {fileID: 8423345330461559946}
   m_Father: {fileID: 4130627450146922813}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3139821887909370641
 BoxCollider:
@@ -11439,7 +11443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9201783421910498297}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.075, y: 0, z: 0}
+  m_LocalPosition: {x: -0.025, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 6010613126400049844}
@@ -11448,7 +11452,7 @@ Transform:
   - {fileID: 7756598202588621854}
   - {fileID: 91400376694395987}
   m_Father: {fileID: 4130627450146922813}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3825718525503932818
 BoxCollider:

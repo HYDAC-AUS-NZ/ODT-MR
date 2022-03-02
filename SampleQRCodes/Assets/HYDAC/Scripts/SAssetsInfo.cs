@@ -3,11 +3,9 @@ using UnityEngine.AddressableAssets;
 
 namespace HYDAC.INFO
 {
-    [CreateAssetMenu(fileName = "AssetsInfo", menuName = "InfoSocs/AssetsInfo")]
+    [CreateAssetMenu(fileName = "AInfo", menuName = "InfoSocs/AssetsInfo")]
     public class SAssetsInfo : ScriptableObject
     {
-        [SerializeField] private string productAssetsKey;
-
         [Space]
         public bool hasSchematic;
         public bool hasModel;
@@ -16,14 +14,13 @@ namespace HYDAC.INFO
 
         [Space]
         [SerializeField] private AssetReference schematicReference;
-        [SerializeField] private AssetReference highPolyReference;
-        [SerializeField] private AssetReference infoUIReference = null;
+        [SerializeField] private AssetReference modelReference;
+        [SerializeField] private AssetReference documentationReference = null;
         [SerializeField] private string videoURL = null;
 
-        public string ProductAssetsKey => productAssetsKey;
         public AssetReference SchematicReference => schematicReference;
-        public AssetReference HighPolyReference => highPolyReference;
-        public AssetReference InfoUIReference => infoUIReference;
+        public AssetReference HighPolyReference => modelReference;
+        public AssetReference InfoUIReference => documentationReference;
         public string VideoURL => videoURL;
     }
 }
