@@ -4,8 +4,7 @@ namespace HYDACDB.INFO
 {
     public abstract class ProductInfo : ScriptableObject
     {
-        [Tooltip("Uncheck after renaming is done")]
-        public bool renameOnValidate = false;
+        public bool rename = false;
         
         [Space]
         [Header("Main Information")] 
@@ -15,17 +14,14 @@ namespace HYDACDB.INFO
         public string iname;
         [TextArea] public string description;
         
-        // Image?
-        // Video?
-        // Schematic
-        
         protected abstract void ChangeFileName();
 
         private void OnValidate()
         {
-            if (renameOnValidate)
+            if (this.rename)
             {
                 ChangeFileName();
+                this.rename = false;
             }
         }
     }
