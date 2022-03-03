@@ -9,6 +9,7 @@ namespace HYDAC.UI
     public class UIComponents : MonoBehaviour
     {
         [SerializeField] protected SocQRCallBacks qrCallbacks;
+        [SerializeField] protected Transform UIObject;
 
         protected SAssetsInfo _currentQRAssets;
 
@@ -24,6 +25,7 @@ namespace HYDAC.UI
         protected virtual void OnQRClosed(QRCode obj)
         {
             _currentQRAssets = null;
+            UIObject.gameObject.SetActive(false);
         }
     }
 }

@@ -3,6 +3,8 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Ss]erverData/
+
 Assets/AssetStoreTools*
 Assets/Packages
 Logs/

@@ -33,7 +33,7 @@ namespace HYDAC.UI
         {
             if (toggle)
             {
-                videoPlayer.transform.parent.gameObject.SetActive(true);
+                UIObject.gameObject.SetActive(true);
 
                 playbackButton.IsToggled = false;
 
@@ -42,8 +42,13 @@ namespace HYDAC.UI
             else
             {
                 videoPlayer.Stop();
-                videoPlayer.transform.parent.gameObject.SetActive(false);
+                UIObject.gameObject.SetActive(false);
             }
+
+            //var relativePath = "https://drive.google.com/file/d/1gS5Br7IeAojYiydF1v7wYHJuG06IWz3_/view?usp=sharing";
+
+            //UnityEngine.WSA.Launcher.LaunchFile(UnityEngine.WSA.Folder.DocumentsLibrary, relativePath, false);
         }
     }
 }
+
