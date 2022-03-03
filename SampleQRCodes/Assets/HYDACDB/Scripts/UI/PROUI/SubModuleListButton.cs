@@ -4,10 +4,11 @@ using UnityEngine.UI;
 using TMPro;
 
 using HYDACDB.INFO;
+using HYDACDB.PRO;
 
 public class SubModuleListButton : MonoBehaviour
 {
-    //[SerializeField] private SocProductNetWrapper productNetWrapper;
+    [SerializeField] private SocProductCallbacks productCallbacks;
     [SerializeField] private TextMeshProUGUI subModuleTitleTxt;
     [SerializeField] private Button button;
 
@@ -26,5 +27,6 @@ public class SubModuleListButton : MonoBehaviour
     private void OnButtonClick()
     {
         //productNetWrapper.InvokeUISubModuleSelect(_info);
+        productCallbacks.OnSubModuleSelected(_info);
     }
 }

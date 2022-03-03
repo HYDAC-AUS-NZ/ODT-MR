@@ -10,7 +10,7 @@ namespace HYDACDB.PRO
 {
     public class ProductFModule : AProduct
     {
-        [FormerlySerializedAs("assemblyEvents")] [SerializeField] private SocProductCallbacks productCallbacks;
+        [SerializeField] private SocProductCallbacks productCallbacks;
         [SerializeField] private Transform rootTransform;
         [SerializeField] private Transform explodedRootTransform;
 

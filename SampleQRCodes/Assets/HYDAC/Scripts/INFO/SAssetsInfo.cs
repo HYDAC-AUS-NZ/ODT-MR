@@ -9,6 +9,7 @@ namespace HYDAC.INFO
         [Space]
         public bool hasSchematic;
         public bool hasModel;
+        public bool isModelStatic = false;
         public bool hasDocumentation;
         public bool hasVideo;
 

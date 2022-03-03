@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36981d974b5546a4cbfa0b4bfa0c0ecb, type: 3}
+  m_Name: RotationHandlesConfiguration
+  m_EditorClassIdentifier: 
+  handleMaterial: {fileID: 2100000, guid: ebd051017fdd75249aad0ec9f72d3f70, type: 2}
+  handleGrabbedMaterial: {fileID: 2100000, guid: b59c51a25fb88db4780167a32f13d526, type: 2}
+  handlePrefab: {fileID: 3868891704370700786, guid: 3d137418fa4d97c49908249a46a241b2, type: 3}
+  handleSize: 0.016
+  colliderPadding: {x: 0.016, y: 0.016, z: 0.016}
+  drawTetherWhenManipulating: 1
+  handlesIgnoreCollider: {fileID: 0}
+  handlePrefabColliderType: 1
+  showHandleForX: 0
+  showHandleForY: 0
+  showHandleForZ: 0
