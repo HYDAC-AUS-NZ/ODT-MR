@@ -71,6 +71,8 @@ namespace HYDAC.QR
             {
                 pendingActions.Enqueue(new ActionData(ActionData.Type.Added, e.Data));
             }
+
+            //QRCodesManager.Instance.StopQRTracking();
         }
 
         private void Instance_QRCodeUpdated(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
@@ -157,6 +159,8 @@ namespace HYDAC.QR
             {
                 pendingActions.Enqueue(new ActionData(ActionData.Type.Removed, qrCode));
             }
+
+            //QRCodesManager.Instance.StartQRTracking();
         }
 
         public void FlushQRDictionary()
