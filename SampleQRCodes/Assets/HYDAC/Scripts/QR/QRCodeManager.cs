@@ -9,6 +9,7 @@ using HYDAC.INFO;
 using HYDAC.Audio;
 using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities;
+using HYDAC.UI;
 
 namespace HYDAC.QR
 { 
@@ -36,6 +37,8 @@ namespace HYDAC.QR
             documentationButton.OnClick.AddListener(OnDocumentationButtonClicked);
             videoButton.OnClick.AddListener(OnVideoButtonClicked);
             closeButton.OnClick.AddListener(OnCloseButtonClicked);
+
+            qrCallBacks.EOnUIComponentClosed += OnUIComponentClosed;
         }
 
         private void OnDisable()
@@ -44,6 +47,15 @@ namespace HYDAC.QR
             documentationButton.OnClick.RemoveListener(OnDocumentationButtonClicked);
             videoButton.OnClick.RemoveListener(OnVideoButtonClicked);
             closeButton.OnClick.RemoveListener(OnCloseButtonClicked);
+
+            qrCallBacks.EOnUIComponentClosed -= OnUIComponentClosed;
+        }
+
+        private void OnUIComponentClosed(EUIComponent obj)
+        {
+            modelButton.IsToggled = false;
+            documentationButton.IsToggled = false;
+            videoButton.IsToggled = false;
         }
 
 

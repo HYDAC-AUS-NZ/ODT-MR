@@ -58,6 +58,8 @@ namespace HYDAC
 
         private async void Start()
         {
+            Debug.Log("#MainManager#-------------Fetching Catalogue");
+
             await CatalogueManager.FetchCatalogue(catalogueLabel);
 
             Debug.Log("#MainManager#-------------Starting QR Scanning");

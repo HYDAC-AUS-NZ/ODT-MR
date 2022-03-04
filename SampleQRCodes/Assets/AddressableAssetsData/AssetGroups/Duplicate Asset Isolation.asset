@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Duplicate Asset Isolation
+  m_EditorClassIdentifier: 
+  m_GroupName: Duplicate Asset Isolation
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7a24c2a8ec063514e8d8f344860c85cd
+  m_SerializeEntries:
+  - m_GUID: 933532a4fcc9baf4fa0491de14d08ed7
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e6e9a19c3678ded42a3bc431ebef7dbd
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec72a3a105768f746b556a8dfdae61a8
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicBackPlate.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 291bf9326e517b0489c2ee53d0a6a63f
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.standardassets/Audio/MRTK_ButtonPress.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0c4c73f326f602744bdcfff481fd6f20
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Themes/HolographicButtonSeeItSayItLabel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e51893c8eb7938e4ba43985af43c0f72
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/States/FocusPressTouchGrabStates.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 329cdefad4cf0f14e9b6767d0af094b0
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.foundation/SDK/Features/UX/Interactable/Materials/HolographicButtonContentCageProximity.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40ae713ddf420714bbc1a3b5c3f2eac1
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.standardassets/Audio/MRTK_ButtonUnpress.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1c504b73bf66872479cd1215fb5ce0fe
+    m_Address: Assets/MRTK/Shaders/MixedRealityTextMeshPro.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: afc8299d5d5bbd440a0616c8ecbc7217
+    m_Address: Packages/com.microsoft.mixedreality.toolkit.standardassets/FontsSDFTextures/DepthWriteOn/segoeui
+      SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cb2bc98ce1e574e4f822e41400c83a40, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 54b61dc2672f94646b3f650202e7a91d, type: 2}
+    - {fileID: 11400000, guid: df23820f2b5b2b64cb69de88af8e54ce, type: 2}
