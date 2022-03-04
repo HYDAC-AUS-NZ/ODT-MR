@@ -1,6 +1,5 @@
 using HYDAC.INFO;
-using Microsoft.MixedReality.QR;
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using HYDACDB.ADD;
@@ -28,42 +27,19 @@ namespace HYDAC.UI
         private Transform[] _subModuleUIs = new Transform[0];
         private SModuleInfo _currentModuleInfo;
 
-        protected override void OnEnable()
+
+        protected override void OnUIComponentOpened(SAssetsInfo assetInfo)
         {
-            base.OnEnable();
-            qrCallbacks.EOnQRModelToggle += OnModelToggle;
+            base.OnUIComponentOpened(assetInfo);
+
+            // Load Submodule Model
+            StartCoroutine(LoadModuleModel(assetInfo));
+
+            explosionButton.gameObject.SetActive(!assetInfo.isModelStatic);
+            rotationButton.gameObject.SetActive(true);
         }
 
 
-        protected override void OnDisable()
-        {
-            base.OnDisable();
-            qrCallbacks.EOnQRModelToggle += OnModelToggle;
-        }
-
-        private void OnModelToggle(bool toggle, SAssetsInfo assetsInfo)
-        {
-            if (toggle)
-            {
-                UIObject.gameObject.SetActive(true);
-                
-                // Load Submodule Model
-                StartCoroutine(LoadModuleModel(assetsInfo));
-
-                explosionButton.gameObject.SetActive(!assetsInfo.isModelStatic);
-                rotationButton.gameObject.SetActive(true);
-            }
-            else
-            {
-                UIObject.gameObject.SetActive(false);
-            }
-        }
-
-        protected override void OnQRClosed(QRCode obj)
-        {
-            base.OnQRClosed(obj);
-        }
-        
         private IEnumerator LoadModuleModel(SAssetsInfo assetInfo)
         {
             // MODEL LOADING

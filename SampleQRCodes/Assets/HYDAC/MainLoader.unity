@@ -334,6 +334,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95781394}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &109440427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5501016391008962158, guid: 5102941d779d8e646812e1639a4f7c03,
+    type: 3}
+  m_PrefabInstance: {fileID: 2483939652294751426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &124153424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,12 +1574,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &508410653 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2487614176056269457, guid: 20bce8e1a4797f64bb4652a99c88300c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2487614176361636236}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &559401076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,8 +1622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6b62e3fe5d28d489d8f8b2454e0000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentType: 2
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 678979466496804871}
+  closeButton: {fileID: 109440427}
   videoPlayer: {fileID: 6154463309830934741}
   playbackButton: {fileID: 1408001826890290544}
   placeHolderVideoURL: https://www.youtube.com/watch?v=ScMzIvxBSi4
@@ -1633,9 +1641,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038859bc3aa127946adcc159ebfdcd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentType: 1
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 5566284899736966780}
-  canvasParent: {fileID: 508410653}
+  closeButton: {fileID: 1485912810}
+  canvasParent: {fileID: 2487614176361636237}
 --- !u!114 &559401080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,8 +1658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6a9f40593dc544ca381e8153cbb10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentType: 0
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 334799718}
+  closeButton: {fileID: 1507346618}
   moduleSpawnPoint: {fileID: 6380943246805690466}
   explosionButton: {fileID: 7947763900652818778}
   rotationButton: {fileID: 7356712786190409141}
@@ -4684,6 +4696,30 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1485912810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 646730518999190875, guid: 20bce8e1a4797f64bb4652a99c88300c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2487614176361636236}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1507346618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4412405245287598774, guid: 841cd74900ee7ab459c77523f8facdcb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412405244155920668}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1544895561
 GameObject:
   m_ObjectHideFlags: 0
@@ -5929,6 +5965,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20bce8e1a4797f64bb4652a99c88300c, type: 3}
+--- !u!224 &2487614176361636237 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7168634974522184952, guid: 20bce8e1a4797f64bb4652a99c88300c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2487614176361636236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4412405244155920668
 PrefabInstance:
   m_ObjectHideFlags: 0

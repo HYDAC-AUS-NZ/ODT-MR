@@ -17,34 +17,13 @@ namespace HYDAC.UI
 
         private Transform _currentInfoUI;
 
-        protected override void OnEnable()
+        protected override void OnUIComponentOpened(SAssetsInfo assetInfo)
         {
-            base.OnEnable();
+            base.OnUIComponentOpened(assetInfo);
 
-            qrCallbacks.EOnQRDocumentationToggle += OnDocumentationToggle;
+            StartCoroutine(LoadDocumentation(assetInfo.InfoUIReference));
         }
 
-        protected override void OnDisable()
-        {
-            base.OnDisable();
-
-            qrCallbacks.EOnQRDocumentationToggle -= OnDocumentationToggle;
-        }
-
-        private void OnDocumentationToggle(bool toggle, SAssetsInfo assetsInfo)
-        {
-            UIObject.gameObject.SetActive(toggle);
-
-            if (toggle)
-            {
-                StartCoroutine(LoadDocumentation(assetsInfo.InfoUIReference));
-            }
-        }
-
-        protected override void OnQRClosed(QRCode obj)
-        {
-            base.OnQRClosed(obj);
-        }
 
         IEnumerator LoadDocumentation(AssetReference uiReference)
         {

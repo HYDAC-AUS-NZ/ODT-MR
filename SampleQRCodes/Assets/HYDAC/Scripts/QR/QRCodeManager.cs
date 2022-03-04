@@ -83,20 +83,28 @@ namespace HYDAC.QR
         }
 
 
-
         private void OnModelButtonClicked()
         {
-            qrCallBacks.InvokeUIQRModelToggle(modelButton.IsToggled, catalogueInfo.AssetsInfo);
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.ModelViewer, modelButton.IsToggled, catalogueInfo.AssetsInfo);
+
+            videoButton.IsToggled = false;
+            documentationButton.IsToggled = false;
         }
 
         private void OnDocumentationButtonClicked()
         {
-            qrCallBacks.InvokeUIQRDocumentationToggle(documentationButton.IsToggled, catalogueInfo.AssetsInfo);
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.DocumentationViewer, documentationButton.IsToggled, catalogueInfo.AssetsInfo);
+
+            modelButton.IsToggled = false;
+            videoButton.IsToggled = false;
         }
 
         private void OnVideoButtonClicked()
         {
-            qrCallBacks.InvokeUIQRVideoToggle(videoButton.IsToggled, catalogueInfo.AssetsInfo);
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.VideoViewer, videoButton.IsToggled, catalogueInfo.AssetsInfo);
+
+            modelButton.IsToggled = false;
+            documentationButton.IsToggled = false;
         }
 
         private void OnCloseButtonClicked()

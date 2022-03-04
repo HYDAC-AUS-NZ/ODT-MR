@@ -15,39 +15,20 @@ namespace HYDAC.UI
         [SerializeField] private Interactable playbackButton;
         [SerializeField] private string placeHolderVideoURL;
 
-        protected override void OnEnable()
+        protected override void OnUIComponentOpened(SAssetsInfo assetInfo)
         {
-            base.OnEnable();
+            base.OnUIComponentOpened(assetInfo);
 
-            qrCallbacks.EOnQRVideoToggle += OnVideoPlayerToggled;
+            playbackButton.IsToggled = false;
+
+            videoPlayer.Play((assetInfo.VideoURL.Equals("")) ? placeHolderVideoURL : assetInfo.VideoURL);
         }
 
-        protected override void OnDisable()
+        protected override void OnUIComponentClosed()
         {
-            base.OnDisable();
+            base.OnUIComponentClosed();
 
-            qrCallbacks.EOnQRVideoToggle -= OnVideoPlayerToggled;
-        }
-
-        private void OnVideoPlayerToggled(bool toggle, SAssetsInfo assetsInfo)
-        {
-            if (toggle)
-            {
-                UIObject.gameObject.SetActive(true);
-
-                playbackButton.IsToggled = false;
-
-                videoPlayer.Play((assetsInfo.VideoURL.Equals("")) ? placeHolderVideoURL : assetsInfo.VideoURL);
-            }
-            else
-            {
-                videoPlayer.Stop();
-                UIObject.gameObject.SetActive(false);
-            }
-
-            //var relativePath = "https://drive.google.com/file/d/1gS5Br7IeAojYiydF1v7wYHJuG06IWz3_/view?usp=sharing";
-
-            //UnityEngine.WSA.Launcher.LaunchFile(UnityEngine.WSA.Folder.DocumentsLibrary, relativePath, false);
+            videoPlayer.Stop();
         }
     }
 }
