@@ -18,4 +18,8 @@ MonoBehaviour:
   iname: Return line filter RFM
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 11400000, guid: e3852a2a7e781bd4dadbf0929f540766, type: 2}
+  assetsInfo:
+    m_AssetGUID: e3852a2a7e781bd4dadbf0929f540766
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

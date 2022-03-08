@@ -238,9 +238,9 @@ MonoBehaviour:
     lightmapIndex: 0
     lightmapOffsetScale: {x: 2.9353147, y: 2.9353147, z: 0.85253906, w: 0.767092}
   m_Lightmaps:
-  - {fileID: 2800000, guid: 821892ce1cfd34045b6c41962ad035e1, type: 3}
+  - {fileID: 2800000, guid: 7ee39b81e028f1644b0ea3fc0486118b, type: 3}
   m_LightmapsDir:
-  - {fileID: 2800000, guid: bc2111655170e6c4dbe86e0a7828eb49, type: 3}
+  - {fileID: 2800000, guid: 10f0dcecaa6a4c64a97b078d252317a4, type: 3}
   m_ShadowMasks:
   - {fileID: 0}
   m_LightInfo: []

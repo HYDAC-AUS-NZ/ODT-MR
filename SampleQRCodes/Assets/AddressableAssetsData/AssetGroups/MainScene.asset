@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MainScene
+  m_EditorClassIdentifier: 
+  m_GroupName: MainScene
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 957b7c7576c82ae45b46e0cd1e76bce9
+  m_SerializeEntries:
+  - m_GUID: 7670a9351b709204ea0c669a37067b3b
+    m_Address: 1_MainActive
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  - m_GUID: 7d1c682d3608d0a4fb2fa4f2a5534d8d
+    m_Address: ProductUIs
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  - m_GUID: dc80bd41950e6b74d9d82cd7f893651e
+    m_Address: M_AC_Label_HYDACLogo 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  - m_GUID: c63050d6dd1589347b4fcff0c0c1174a
+    m_Address: TitleBarPinTheme
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  - m_GUID: b3358b4905d74534783149537a1f995d
+    m_Address: ModuleViewer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  - m_GUID: 4ca1c3a4ce78c574aaa38f6e2efcda96
+    m_Address: VideoPlayer_Tutorial
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  - m_GUID: fd99eae6cc5dae24b853042253b4b61d
+    m_Address: QR
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainScene
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cb2bc98ce1e574e4f822e41400c83a40, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 75ab83bfc95ab224b94e1c2e36dd6ff2, type: 2}
+    - {fileID: 11400000, guid: 62d826ed72c108a48a26cc86db71e5b1, type: 2}

@@ -18,4 +18,8 @@ MonoBehaviour:
   iname: Pumps - PPV 100S / PPV 101
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 11400000, guid: db13749d7bda17449af79d32205a3912, type: 2}
+  assetsInfo:
+    m_AssetGUID: db13749d7bda17449af79d32205a3912
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

@@ -38,8 +38,10 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: e5e7eef51d66ec3469ba625b0e7eabbe, type: 2}
   - {fileID: 11400000, guid: e2f6c6010857bcf4699683abfcee4141, type: 2}
+  - {fileID: 11400000, guid: 4b982d8acf30fcf498256086819cffa5, type: 2}
   - {fileID: 11400000, guid: 005ce09659312574bac72acdad624ff4, type: 2}
   - {fileID: 11400000, guid: b7ad63365e6ac9e48b102bf2b898d82e, type: 2}
+  - {fileID: 11400000, guid: a9e02d1f2729b7a4ba3d271d844cfe7f, type: 2}
   - {fileID: 11400000, guid: f88273b95555a124c814c23b5692801f, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
@@ -83,6 +85,7 @@ MonoBehaviour:
     m_LabelNames:
     - Default
     - Catalogue
+    - MainScene
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 933c8dc0b61a4f447b06c735a2cc152f, type: 2}
@@ -100,5 +103,6 @@ MonoBehaviour:
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
-    m_NextInstanceId: 0
-    m_RegisteredServiceTypeRefs: []
+    m_NextInstanceId: 1
+    m_RegisteredServiceTypeRefs:
+    - UnityEditor.AddressableAssets.HostingServices.HttpHostingService, Unity.Addressables.Editor

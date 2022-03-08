@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-using HYDACDB.INFO;
+using HYDAC.INFO;
+using UnityEngine.AddressableAssets;
 
 namespace HYDAC.INFO
 {
@@ -14,8 +15,8 @@ namespace HYDAC.INFO
         [SerializeField] private string productAssetsKey;
         public string ProductAssetsKey => productAssetsKey;
 
-        [SerializeField] private SAssetsInfo assetsInfo;
-        public SAssetsInfo AssetsInfo => assetsInfo;
+        [SerializeField] private AssetReference assetsInfo;
+        public AssetReference AssetsInfo => assetsInfo;
         
         protected override void ChangeFileName()
         {

@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103fb5174b182644498ceb2f2052634c, type: 3}
   m_Name: CInfo_3108660_Air Cooler - OK_ELC3
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
+  rename: 0
   productID: 3108660
   ID: 0
   iname: Air Cooler - OK_ELC3
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 0}
+  assetsInfo:
+    m_AssetGUID: 7e09362872e528e44b2d95b7d41cb11a
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

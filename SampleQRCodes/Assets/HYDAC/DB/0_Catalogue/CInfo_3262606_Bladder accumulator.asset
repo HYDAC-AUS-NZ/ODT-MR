@@ -18,4 +18,8 @@ MonoBehaviour:
   iname: Bladder accumulator
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 11400000, guid: 4abf51c801f209d4d9ba75909d61b3ac, type: 2}
+  assetsInfo:
+    m_AssetGUID: 4abf51c801f209d4d9ba75909d61b3ac
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

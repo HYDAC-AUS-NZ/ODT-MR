@@ -13,8 +13,12 @@ namespace HYDAC.QR
 
         [SerializeField] private SocQRCallBacks qrCallbacks;
 
+        [SerializeField] private GameObject qrScanSquarePrefab;
+
         private System.Collections.Generic.SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
         private bool clearExisting = false;
+
+        private Transform _mainCameraTransform;
 
         struct ActionData
         {
@@ -35,11 +39,17 @@ namespace HYDAC.QR
         }
 
         private System.Collections.Generic.Queue<ActionData> pendingActions = new Queue<ActionData>();
+        private bool _isQRRunning;
+        private GameObject _qrScanSquare;
 
         // Use this for initialization
         void Start()
         {
             Debug.Log("QRTranslator start");
+
+            _mainCameraTransform = Camera.main.transform;
+            
+            _isQRRunning = false;
             qrCodesObjectsList = new SortedDictionary<System.Guid, GameObject>();
 
             QRCodesManager.Instance.QRCodesTrackingStateChanged += Instance_QRCodesTrackingStateChanged;
@@ -53,6 +63,8 @@ namespace HYDAC.QR
             {
                 throw new System.Exception("Prefab not assigned");
             }
+            
+            OnUIStartTracking();
         }
 
         private void Instance_QRCodesTrackingStateChanged(object sender, bool status)
@@ -72,24 +84,24 @@ namespace HYDAC.QR
                 pendingActions.Enqueue(new ActionData(ActionData.Type.Added, e.Data));
             }
 
-            QRCodesManager.Instance.StopQRTracking();
+            //QRCodesManager.Instance.StopQRTracking();
         }
 
         private void Instance_QRCodeUpdated(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
-            Debug.Log("#QRTranslator#-----------QRCodeUpdated");
+            //Debug.Log("#QRTranslator#-----------QRCodeUpdated");
 
             lock (pendingActions)
             {
                 pendingActions.Enqueue(new ActionData(ActionData.Type.Updated, e.Data));
             }
 
-            QRCodesManager.Instance.StopQRTracking();
+            //QRCodesManager.Instance.StopQRTracking();
         }
 
         private void Instance_QRCodeRemoved(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
-            Debug.Log("#QRTranslator#-----------QRCodeRemoved");
+            //Debug.Log("#QRTranslator#-----------QRCodeRemoved");
 
             lock (pendingActions)
             {
@@ -146,8 +158,11 @@ namespace HYDAC.QR
         }
 
         // Update is called once per frame
-        void Update()
+        void LateUpdate()
         {
+            if (!_isQRRunning)
+                return;
+            
             HandleEvents();
 
             DictionaryCount = qrCodesObjectsList.Count;
@@ -155,19 +170,42 @@ namespace HYDAC.QR
 
         private void OnQRCodeClosed(Microsoft.MixedReality.QR.QRCode qrCode)
         {
-            Debug.Log("#QRTranslator#-----------Deleting QR code");
+            //Debug.Log("#QRTranslator#-----------Deleting QR code");
 
-            lock (pendingActions)
+            if (qrCodesObjectsList.ContainsKey(qrCode.Id))
             {
-                pendingActions.Enqueue(new ActionData(ActionData.Type.Removed, qrCode));
+                Destroy(qrCodesObjectsList[qrCode.Id]);
+                qrCodesObjectsList.Remove(qrCode.Id);
             }
 
-            QRCodesManager.Instance.StartQRTracking();
+            //QRCodesManager.Instance.StartQRTracking();
         }
 
         public void FlushQRDictionary()
         {
             qrCodesObjectsList.Clear();
+        }
+
+
+        public void OnUIStopTracking()
+        {
+            _isQRRunning = false;
+            
+            QRCodesManager.Instance.enabled = false;
+            
+            _qrScanSquare.SetActive(false);
+        }
+
+        public void OnUIStartTracking()
+        {
+            _isQRRunning = true;
+
+            QRCodesManager.Instance.enabled = true;
+
+            if (_qrScanSquare == null)
+                _qrScanSquare = Instantiate(qrScanSquarePrefab, _mainCameraTransform);
+
+            _qrScanSquare.SetActive(true);
         }
     }
 }

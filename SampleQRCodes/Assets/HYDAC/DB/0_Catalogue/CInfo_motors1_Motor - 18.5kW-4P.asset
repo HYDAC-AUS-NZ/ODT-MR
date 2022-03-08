@@ -18,4 +18,8 @@ MonoBehaviour:
   iname: Motor - 18.5kW-4P
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 11400000, guid: c2364d58079c73f48a72bf076e9112d2, type: 2}
+  assetsInfo:
+    m_AssetGUID: c2364d58079c73f48a72bf076e9112d2
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

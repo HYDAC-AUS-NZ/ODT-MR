@@ -1,14 +1,18 @@
 using System;
 
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+
+using Microsoft.MixedReality.Toolkit.UI;
+using Microsoft.MixedReality.Toolkit.Utilities;
+
 using TMPro;
 
 using QRTracking;
 
 using HYDAC.INFO;
 using HYDAC.Audio;
-using Microsoft.MixedReality.Toolkit.UI;
-using Microsoft.MixedReality.Toolkit.Utilities;
 using HYDAC.UI;
 
 namespace HYDAC.QR
@@ -30,6 +34,7 @@ namespace HYDAC.QR
 
         QRCode qrCode;
         SCatalogueInfo catalogueInfo;
+        private SAssetsInfo _assetInfo;
 
         private void OnEnable()
         {
@@ -74,7 +79,7 @@ namespace HYDAC.QR
             // Get Product Details
             var qrData = qrCode.qrCode.Data;
             var partID = qrData.Substring(qrData.LastIndexOf(qrDataLabel, StringComparison.Ordinal) + qrDataLabel.Length);
-            catalogueInfo = CatalogueManager.GetProductInfo(partID);
+            catalogueInfo = CatalogueManager.Instance.GetProductInfo(partID);
 
             if (catalogueInfo == null)
             {
@@ -85,11 +90,20 @@ namespace HYDAC.QR
             urlText.text = qrData;
             partName.text = catalogueInfo.iname;
 
+            var handle = Addressables.LoadAssetAsync<SAssetsInfo>(catalogueInfo.AssetsInfo);
+            handle.Completed += OnAssetInfoLoadingComplete;
+        }
+
+        private void OnAssetInfoLoadingComplete(AsyncOperationHandle<SAssetsInfo> obj)
+        {
+            _assetInfo = obj.Result;
+            
+            Debug.Log($"#QRCodeManager#----------Product assetInfo downloaded: {_assetInfo.name}");
+            
             // Set Buttons
-            var assetsInfo = catalogueInfo.AssetsInfo;
-            modelButton.gameObject.SetActive(assetsInfo.hasModel);
-            documentationButton.gameObject.SetActive(assetsInfo.hasDocumentation);
-            videoButton.gameObject.SetActive(assetsInfo.hasVideo);
+            modelButton.gameObject.SetActive(_assetInfo.hasModel);
+            documentationButton.gameObject.SetActive(_assetInfo.hasDocumentation);
+            videoButton.gameObject.SetActive(_assetInfo.hasVideo);
 
             modelButton.gameObject.transform.parent.GetComponent<GridObjectCollection>().UpdateCollection();
         }
@@ -97,7 +111,7 @@ namespace HYDAC.QR
 
         private void OnModelButtonClicked()
         {
-            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.ModelViewer, modelButton.IsToggled, catalogueInfo.AssetsInfo);
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.ModelViewer, modelButton.IsToggled, _assetInfo);
 
             videoButton.IsToggled = false;
             documentationButton.IsToggled = false;
@@ -105,7 +119,7 @@ namespace HYDAC.QR
 
         private void OnDocumentationButtonClicked()
         {
-            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.DocumentationViewer, documentationButton.IsToggled, catalogueInfo.AssetsInfo);
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.DocumentationViewer, documentationButton.IsToggled, _assetInfo);
 
             modelButton.IsToggled = false;
             videoButton.IsToggled = false;
@@ -113,7 +127,7 @@ namespace HYDAC.QR
 
         private void OnVideoButtonClicked()
         {
-            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.VideoViewer, videoButton.IsToggled, catalogueInfo.AssetsInfo);
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.VideoViewer, videoButton.IsToggled, _assetInfo);
 
             modelButton.IsToggled = false;
             documentationButton.IsToggled = false;

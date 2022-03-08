@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MRTK
+  m_EditorClassIdentifier: 
+  m_GroupName: MRTK
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7961ee7bab255fa4abcf1cbd7075478e
+  m_SerializeEntries:
+  - m_GUID: 5bdea20278144b11916d77503ba1467a
+    m_Address: MixedRealityStandard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8f8cfb3041153fa45bccb6d664a563ec
+    m_Address: PressableButtonFrontPlate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20f25674b9512834f88938d45ed495d7
+    m_Address: DefaultIconsSpriteSheet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fa419ab56051229449e3b813df8f295f
+    m_Address: HolographicButtonIconFontMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ea677436af9004848a7f20878e38257c
+    m_Address: IconStar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6a84f857bec7e7345843ae29404c57ce
+    m_Address: seguisb SDF
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8d0274d8bc6a17844a08b493920d9491
+    m_Address: IconClose
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b386ef895f7c924f8c4b03d1d3ed683
+    m_Address: DefaultIconSet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 38a587e9218b3284485088c9925af61f
+    m_Address: MRTK_PressableInteractablesButtonBox
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b566bbce04d66f4428421e81a3af0299
+    m_Address: CompoundButtonMeshes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2e264b2035e178e4dac9e40cfcf38662
+    m_Address: IconDot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 49a59150fd8a7c1438828c262032e023
+    m_Address: IconMicrophone
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 559e1da0e65611c4f93ec931e1e6a8a2
+    m_Address: IconRefresh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 85835ae0b6c3c1c418a57400fcbb788c
+    m_Address: IconHome
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5066c514f7f02f4292cf842f3c8b75f
+    m_Address: IconDone
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7de780622ddab5e49b73d5d7a806faf9
+    m_Address: IconProfiler
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bb1b4a9241fba2042a81428e917afd5d
+    m_Address: IconAdjust
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac8550a474419054d9621216812fd098
+    m_Address: IconSettings
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd30f98596e69f7469fda20a47760dd1
+    m_Address: IconFollowMe
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6a8d6d764af76740ad06383ee810941
+    m_Address: IconAdd
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d74cdc58c5d172a469ea5ca987eb17f6
+    m_Address: IconHide
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 937867e9be7912d4a903cd401ee0a959
+    m_Address: IconMessage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0771cd1b5e4131e45afe250cd1713737
+    m_Address: IconHandJoint
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cb5a9c3bdc2017d4f9e805e3a7e72b1d
+    m_Address: IconSpatialMapping
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0bee624b4074e5445929e56287795085
+    m_Address: IconShow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 114589bc5b891c3488cbb8607b6b9171
+    m_Address: IconCamera
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 86609bdc7f4c43d42991f96373fb8081
+    m_Address: IridescentSpectrum
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
+    m_Address: TMP_SDF
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5ced9c7e98be2e941a88b5d0a16b2a3b
+    m_Address: IconPin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ed2f699f32ec17f4cad3423d2c449119
+    m_Address: IconSearch
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b7ebc1af93ceaba48aed1e572edc6a58
+    m_Address: IconHandRay
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4494cfaf424cdde49895b91e2b559258
+    m_Address: IconHandMesh
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: TMP_SDF-Mobile
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 087b16002c2b0b445baa3ed3beae44a9
+    m_Address: PressableButtonIcon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec72a3a105768f746b556a8dfdae61a8
+    m_Address: HolographicBackPlate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 291bf9326e517b0489c2ee53d0a6a63f
+    m_Address: MRTK_ButtonPress
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0c4c73f326f602744bdcfff481fd6f20
+    m_Address: HolographicButtonSeeItSayItLabel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e51893c8eb7938e4ba43985af43c0f72
+    m_Address: FocusPressTouchGrabStates
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 329cdefad4cf0f14e9b6767d0af094b0
+    m_Address: HolographicButtonContentCageProximity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40ae713ddf420714bbc1a3b5c3f2eac1
+    m_Address: MRTK_ButtonUnpress
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1c504b73bf66872479cd1215fb5ce0fe
+    m_Address: MixedRealityTextMeshPro
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 933532a4fcc9baf4fa0491de14d08ed7
+    m_Address: Lit
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e3265ab4bf004d28a9537516768c1c75
+    m_Address: LiberationSans
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: afc8299d5d5bbd440a0616c8ecbc7217
+    m_Address: segoeui SDF
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 45a90682f74bb0c41b65994c63b74e60
+    m_Address: MRTK_Slate_Release
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 72d90092d0f1a734eb1cfcf71b8fa2e4
+    m_Address: MRTK_Move_Start
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 23a78d131feb8774ebe5dd1ea221933e
+    m_Address: MRTK_Scale_Stop
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec33d8a6027c1574390812966f8aef94
+    m_Address: MRTK_Move_End
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 937ce507dd7ee334ba569554e24adbdd
+    m_Address: Slate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdc1f15a0c976854780adcd7e56cfb3e
+    m_Address: MRTK_Scale_Start
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d90886bb6646244e852a0acb1de3a3b
+    m_Address: MRTK_Rotate_Stop
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac992f1ec8cfba145b10655b334ec711
+    m_Address: MRTK_Slate_Touch
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 15445dbe491e8f9428ad63168cae68eb
+    m_Address: CarryModeOutline
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 765efbcf7ca1773488edcc8ab6ba4923
+    m_Address: MRTK_Rotate_Start
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 969c9b04d1b1848489de0d6efe6250fc
+    m_Address: MRTK_BoundingBox_RotateHandle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ba9083550f965e545a628b53bfa80c9e
+    m_Address: MRTK_BoundingBox_ScaleHandle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f671b04930fdad54c8b50a4c6d7d9b02
+    m_Address: BoundingBoxSlateGrabbed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c45e552a6d92491468c421c35c5dd63d
+    m_Address: MRTK_BoundingBox_ScaleHandle_Slate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bf37b5eab60b288498d02fd524325d10
+    m_Address: BoundingBoxHandleBlueGrabbed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 986558eab447a9847bbe138149edc1b4
+    m_Address: BoundingBoxHandleWhite
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f044b5d95469d64ea8feb1225b1d5fa
+    m_Address: BoundingBoxSlate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 57c53da2552a8114ab6d68e0cd31b1eb
+    m_Address: MRTK_BoundingBox_RotateHandle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a6473ac7ac982fb488db53a454bf0a3c
+    m_Address: MRTK_BoundingBox_ScaleHandle_Slate
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6fcd4c9c53bfcb94b8c314ab6865ddd4
+    m_Address: MRTK_BoundingBox_ScaleHandle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: cb2bc98ce1e574e4f822e41400c83a40, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 54b61dc2672f94646b3f650202e7a91d, type: 2}
+    - {fileID: 11400000, guid: df23820f2b5b2b64cb69de88af8e54ce, type: 2}

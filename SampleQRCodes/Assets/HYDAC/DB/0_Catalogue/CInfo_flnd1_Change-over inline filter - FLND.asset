@@ -18,4 +18,8 @@ MonoBehaviour:
   iname: Change-over Inline Filter
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 11400000, guid: 06855ddb53ef1354e8157528d5cb0066, type: 2}
+  assetsInfo:
+    m_AssetGUID: 06855ddb53ef1354e8157528d5cb0066
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

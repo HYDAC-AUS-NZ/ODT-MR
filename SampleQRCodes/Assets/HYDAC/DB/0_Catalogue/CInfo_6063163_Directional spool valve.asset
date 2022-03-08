@@ -18,4 +18,8 @@ MonoBehaviour:
   iname: Directional spool valve
   description: 
   productAssetsKey: 
-  assetsInfo: {fileID: 11400000, guid: 308e90f5a0145524097bc698ad3182d1, type: 2}
+  assetsInfo:
+    m_AssetGUID: 308e90f5a0145524097bc698ad3182d1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

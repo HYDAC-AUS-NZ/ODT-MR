@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 90dcc736907f4f043ad33cda9fcb4759
   m_SerializeEntries:
-  - m_GUID: 7479da0a75e39654f9340779e1e6c5de
-    m_Address: SharedAssets
+  - m_GUID: b0bf08327ed7aac438f46c45822de9ae
+    m_Address: SOC_QRCallbacks
     m_ReadOnly: 0
     m_SerializedLabels:
     - Default
@@ -27,8 +27,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Default
-  - m_GUID: b0bf08327ed7aac438f46c45822de9ae
-    m_Address: SOC_QRCallbacks
+  - m_GUID: a15c149b8c585f64c83622ed3a2b89eb
+    m_Address: ARIAL SDF
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Default
+  - m_GUID: 2431e0ad27bd20548bdd774cf71d7655
+    m_Address: M_UI_MRTKButton
     m_ReadOnly: 0
     m_SerializedLabels:
     - Default
