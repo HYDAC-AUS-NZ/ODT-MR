@@ -1196,6 +1196,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 559401077}
     m_Modifications:
+    - target: {fileID: 7605977850337759748, guid: 20bce8e1a4797f64bb4652a99c88300c,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011779190042758674, guid: 20bce8e1a4797f64bb4652a99c88300c,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8050938006987847664, guid: 20bce8e1a4797f64bb4652a99c88300c,
         type: 3}
       propertyPath: m_RootOrder

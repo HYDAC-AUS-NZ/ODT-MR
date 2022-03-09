@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_5_5 Safety Valve
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 5
+  rename: 0
   productID: 
+  ID: 5
   iname: Safety Valve
   description: 'Description:'
   isStatic: 0
