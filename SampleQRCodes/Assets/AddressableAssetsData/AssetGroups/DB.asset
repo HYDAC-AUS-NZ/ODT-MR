@@ -57,6 +57,10 @@ MonoBehaviour:
     m_Address: rfm1
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: e6aae28ae341f0b49b4df5522654e700
+    m_Address: hybox2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: cb2bc98ce1e574e4f822e41400c83a40, type: 2}
   m_SchemaSet:

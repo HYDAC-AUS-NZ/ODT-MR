@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSchematic: 0
   hasModel: 1
-  hasDocumentation: 1
-  hasVideo: 1
+  isModelStatic: 0
+  hasDocumentation: 0
+  hasVideo: 0
   schematicReference:
     m_AssetGUID: 
     m_SubObjectName: 
@@ -31,4 +32,4 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/4WLcvDKSf74
+  videoURL: 

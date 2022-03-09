@@ -13,8 +13,7 @@ namespace HYDAC.UI
 {
     public class UIModelViewer : UIComponents
     {
-        // Module Viewer
-        [Header("ModuleViewer Members")]
+        [Header("Module Viewer Members")]
         [SerializeField] private Transform moduleSpawnPoint;
         [SerializeField] private Interactable explosionButton;
         [SerializeField] private Interactable rotationButton;

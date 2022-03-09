@@ -30,43 +30,18 @@ namespace HYDAC.QR
         [SerializeField] private Interactable modelButton;
         [SerializeField] private Interactable documentationButton;
         [SerializeField] private Interactable videoButton;
+        [SerializeField] private Interactable schematicButton;
         [SerializeField] private Interactable closeButton;
 
         QRCode qrCode;
         SCatalogueInfo catalogueInfo;
         private SAssetsInfo _assetInfo;
 
-        private void OnEnable()
-        {
-            modelButton.OnClick.AddListener(OnModelButtonClicked);
-            documentationButton.OnClick.AddListener(OnDocumentationButtonClicked);
-            videoButton.OnClick.AddListener(OnVideoButtonClicked);
-            closeButton.OnClick.AddListener(OnCloseButtonClicked);
-
-            qrCallBacks.EOnUIComponentClosed += OnUIComponentClosed;
-        }
-
-        private void OnDisable()
-        {
-            modelButton.OnClick.RemoveListener(OnModelButtonClicked);
-            documentationButton.OnClick.RemoveListener(OnDocumentationButtonClicked);
-            videoButton.OnClick.RemoveListener(OnVideoButtonClicked);
-            closeButton.OnClick.RemoveListener(OnCloseButtonClicked);
-
-            qrCallBacks.EOnUIComponentClosed -= OnUIComponentClosed;
-        }
-
-        private void OnUIComponentClosed(EUIComponent obj)
-        {
-            modelButton.IsToggled = false;
-            documentationButton.IsToggled = false;
-            videoButton.IsToggled = false;
-        }
-
-
         // Use this for initialization
         void Start()
         {
+            qrCallBacks.EOnUIComponentClosed += OnUIComponentClosed;
+
             qrCode = GetComponent<QRCode>();
 
             AudioManager.Instance.PlayClip(AudioManager.Instance.qrScanned);
@@ -100,14 +75,45 @@ namespace HYDAC.QR
             
             Debug.Log($"#QRCodeManager#----------Product assetInfo downloaded: {_assetInfo.name}");
             
-            // Set Buttons
-            modelButton.gameObject.SetActive(_assetInfo.hasModel);
+            // Setup Buttons
+
+            closeButton.OnClick.AddListener(OnCloseButtonClicked);
+            
             documentationButton.gameObject.SetActive(_assetInfo.hasDocumentation);
             videoButton.gameObject.SetActive(_assetInfo.hasVideo);
-
+            schematicButton.gameObject.SetActive(_assetInfo.hasSchematic);
+            
             modelButton.gameObject.transform.parent.GetComponent<GridObjectCollection>().UpdateCollection();
-        }
 
+            if (_assetInfo.hasModel)
+            {
+                modelButton.OnClick.AddListener(OnModelButtonClicked);
+                modelButton.gameObject.SetActive(true);
+            }
+            if (_assetInfo.hasDocumentation)
+            {
+                documentationButton.OnClick.AddListener(OnDocumentationButtonClicked);
+                documentationButton.gameObject.SetActive(true);
+            }
+            if (_assetInfo.hasVideo)
+            {
+                videoButton.OnClick.AddListener(OnVideoButtonClicked);
+                videoButton.gameObject.SetActive(true);
+            }
+            if (_assetInfo.hasSchematic)
+            {
+                schematicButton.OnClick.AddListener(OnSchematicButtonClicked);
+                schematicButton.gameObject.SetActive(true);
+            }
+        }
+        
+        private void OnUIComponentClosed(EUIComponent obj)
+        {
+            modelButton.IsToggled = false;
+            documentationButton.IsToggled = false;
+            videoButton.IsToggled = false;
+            schematicButton.IsToggled = false;
+        }
 
         private void OnModelButtonClicked()
         {
@@ -115,6 +121,7 @@ namespace HYDAC.QR
 
             videoButton.IsToggled = false;
             documentationButton.IsToggled = false;
+            schematicButton.IsToggled = false;
         }
 
         private void OnDocumentationButtonClicked()
@@ -123,6 +130,7 @@ namespace HYDAC.QR
 
             modelButton.IsToggled = false;
             videoButton.IsToggled = false;
+            schematicButton.IsToggled = false;
         }
 
         private void OnVideoButtonClicked()
@@ -131,11 +139,47 @@ namespace HYDAC.QR
 
             modelButton.IsToggled = false;
             documentationButton.IsToggled = false;
+            schematicButton.IsToggled = false;
+        }
+        
+        private void OnSchematicButtonClicked()
+        {
+            qrCallBacks.InvokeUIComponentToggle(UI.EUIComponent.SchematicViewer, schematicButton.IsToggled, _assetInfo);
+            
+            schematicButton.IsToggled = true;
+
+            modelButton.IsToggled = false;
+            documentationButton.IsToggled = false;
+            videoButton.IsToggled = false;
         }
 
         private void OnCloseButtonClicked()
         {
             qrCallBacks.InvokeQRCodeClosed(qrCode.qrCode);
+        }
+        
+        private void OnDestroy()
+        {
+            qrCallBacks.EOnUIComponentClosed -= OnUIComponentClosed;
+            
+            closeButton.OnClick.RemoveListener(OnCloseButtonClicked);
+
+            if (_assetInfo.hasModel)
+            {
+                modelButton.OnClick.RemoveListener(OnModelButtonClicked);
+            }
+            if (_assetInfo.hasDocumentation)
+            {
+                documentationButton.OnClick.RemoveListener(OnDocumentationButtonClicked);
+            }
+            if (_assetInfo.hasVideo)
+            {
+                videoButton.OnClick.RemoveListener(OnVideoButtonClicked);
+            }
+            if (_assetInfo.hasSchematic)
+            {
+                schematicButton.OnClick.RemoveListener(OnSchematicButtonClicked);
+            }
         }
     }
 }

@@ -3092,7 +3092,7 @@ GameObject:
   - component: {fileID: 9166177885705269976}
   - component: {fileID: -2246313720415980378}
   m_Layer: 5
-  m_Name: 06_ModuleInfoCanvas
+  m_Name: Doc_rfm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

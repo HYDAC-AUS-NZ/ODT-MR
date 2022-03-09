@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71a745c153fc04047a49375276219219, type: 3}
-  m_Name: AInfo_2363906
+  m_Name: AInfo_hybox2
   m_EditorClassIdentifier: 
-  hasSchematic: 0
-  hasModel: 1
-  isModelStatic: 1
-  hasDocumentation: 1
-  hasVideo: 1
+  hasSchematic: 1
+  hasModel: 0
+  isModelStatic: 0
+  hasDocumentation: 0
+  hasVideo: 0
   schematicReference:
-    m_AssetGUID: 
+    m_AssetGUID: c4d62f2590387454281c8afb46e154f3
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   modelReference:
-    m_AssetGUID: b05d9c72995a5634cb7e3ab2f4695153
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   documentationReference:
-    m_AssetGUID: 5a04471617c167449a525a3991547809
+    m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/gRHt9ap7a6A
+  videoURL: 

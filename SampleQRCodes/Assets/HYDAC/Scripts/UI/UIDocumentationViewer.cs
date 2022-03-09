@@ -10,6 +10,7 @@ namespace HYDAC.UI
 {
     public class UIDocumentationViewer : UIComponents
     {
+        [Header("Documentation Viewer Members")]
         [SerializeField] private Transform canvasParent;
 
         private Transform _currentInfoUI;

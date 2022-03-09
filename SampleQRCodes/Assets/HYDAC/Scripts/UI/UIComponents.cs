@@ -14,6 +14,7 @@ namespace HYDAC.UI
         ModelViewer,
         DocumentationViewer,
         VideoViewer,
+        SchematicViewer
     }
 
 

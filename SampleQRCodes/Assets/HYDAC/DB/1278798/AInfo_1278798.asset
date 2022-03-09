@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasSchematic: 0
   hasModel: 0
-  hasDocumentation: 0
+  isModelStatic: 0
+  hasDocumentation: 1
   hasVideo: 0
   schematicReference:
     m_AssetGUID: 
@@ -27,7 +28,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   documentationReference:
-    m_AssetGUID: 
+    m_AssetGUID: 902157fae4c962649ab958f524b80f8f
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
