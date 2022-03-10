@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_UI_ToolTipBg
+  m_Name: M_UI_Bg
   m_Shader: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
   m_ShaderKeywords: _BORDER_LIGHT_REPLACES_ALBEDO _DISABLE_ALBEDO_MAP _METALLIC_TEXTURE_ALBEDO_CHANNEL_A
     _ROUND_CORNERS
@@ -97,7 +97,7 @@ Material:
     - _ClippingPlaneBorderWidth: 0.025
     - _ClippingSphere: 0
     - _ColorWriteMask: 15
-    - _CullMode: 1
+    - _CullMode: 2
     - _CustomMode: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -133,7 +133,7 @@ Material:
     - _InstancedColor: 0
     - _Iridescence: 0
     - _IridescenceAngle: -0.78
-    - _IridescenceIntensity: 0.75
+    - _IridescenceIntensity: 0.059
     - _IridescenceThreshold: 0.05
     - _Metallic: 0
     - _MipmapBias: -2
@@ -152,8 +152,8 @@ Material:
     - _RenderQueueOverride: -1
     - _RimLight: 0
     - _RimPower: 5.83
-    - _RoundCornerMargin: 0
-    - _RoundCornerRadius: 0
+    - _RoundCornerMargin: 0.1
+    - _RoundCornerRadius: 0.5
     - _RoundCorners: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -178,12 +178,12 @@ Material:
     - _ClipPlane: {r: 0, g: 1, b: 0, a: 0}
     - _ClippingBorderColor: {r: 1, g: 0.2, b: 0, a: 1}
     - _ClippingPlaneBorderColor: {r: 1, g: 0.2, b: 0, a: 1}
-    - _Color: {r: 0.92941177, g: 0.92941177, b: 0.92941177, a: 1}
+    - _Color: {r: 0.11974899, g: 0.12071315, b: 0.12264148, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EnvironmentColorX: {r: 1, g: 0, b: 0, a: 1}
-    - _EnvironmentColorY: {r: 0, g: 1, b: 0, a: 1}
-    - _EnvironmentColorZ: {r: 0, g: 0, b: 1, a: 1}
+    - _EnvironmentColorY: {r: 0.8862745, g: 0, b: 0, a: 1}
+    - _EnvironmentColorZ: {r: 0.8862745, g: 0, b: 0.101960786, a: 1}
     - _HoverColor: {r: 1, g: 0, b: 0, a: 1}
     - _HoverColorOpaqueOverride: {r: 1, g: 1, b: 1, a: 1}
     - _HoverColorOverride: {r: 1, g: 1, b: 1, a: 0.566}

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0.8
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 202e2fe9c6cf9994e9dc5042de582b6c, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 3
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 331859855}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -339,13 +339,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -463,6 +463,7 @@ MonoBehaviour:
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 678979466496804871}
   closeButton: {fileID: 109440427}
+  pinButton: {fileID: 2483939652294751427}
   videoPlayer: {fileID: 6154463309830934741}
   playbackButton: {fileID: 1408001826890290544}
   placeHolderVideoURL: https://www.youtube.com/watch?v=ScMzIvxBSi4
@@ -482,6 +483,7 @@ MonoBehaviour:
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 5566284899736966780}
   closeButton: {fileID: 1485912810}
+  pinButton: {fileID: 2487614176361636238}
   canvasParent: {fileID: 2487614176361636237}
 --- !u!114 &559401080
 MonoBehaviour:
@@ -499,6 +501,7 @@ MonoBehaviour:
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 334799718}
   closeButton: {fileID: 1507346618}
+  pinButton: {fileID: 4412405244155920669}
   moduleSpawnPoint: {fileID: 6380943246805690466}
   explosionButton: {fileID: 7947763900652818778}
   rotationButton: {fileID: 7356712786190409141}
@@ -522,6 +525,7 @@ MonoBehaviour:
   qrCallbacks: {fileID: 11400000, guid: b0bf08327ed7aac438f46c45822de9ae, type: 2}
   UIObject: {fileID: 642163483509730608}
   closeButton: {fileID: 8046354477751031707}
+  pinButton: {fileID: 14743326547374271}
   schematicRenderer: {fileID: 2934915419173415667}
 --- !u!114 &1485912810 stripped
 MonoBehaviour:
@@ -775,18 +779,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UI_Schematic
       objectReference: {fileID: 0}
-    - target: {fileID: 638680685229038991, guid: a03caf06f237cdd4c895e36da22e422b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042870649578891045, guid: a03caf06f237cdd4c895e36da22e422b,
-        type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a03caf06f237cdd4c895e36da22e422b, type: 3}
+--- !u!114 &14743326547374271 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8042870650299245522, guid: a03caf06f237cdd4c895e36da22e422b,
+    type: 3}
+  m_PrefabInstance: {fileID: 14743326547374270}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &209093202884356154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,11 +1123,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UI_VideoPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 3104248765949328580, guid: 5102941d779d8e646812e1639a4f7c03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3104248765949328581, guid: 5102941d779d8e646812e1639a4f7c03,
         type: 3}
       propertyPath: m_RootOrder
@@ -1177,18 +1178,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5461534326312357976, guid: 5102941d779d8e646812e1639a4f7c03,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8732556515388284427, guid: 5102941d779d8e646812e1639a4f7c03,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5102941d779d8e646812e1639a4f7c03, type: 3}
+--- !u!114 &2483939652294751427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5501016392568144537, guid: 5102941d779d8e646812e1639a4f7c03,
+    type: 3}
+  m_PrefabInstance: {fileID: 2483939652294751426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2487614176361636236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1196,16 +1199,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 559401077}
     m_Modifications:
-    - target: {fileID: 7605977850337759748, guid: 20bce8e1a4797f64bb4652a99c88300c,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 8011779190042758674, guid: 20bce8e1a4797f64bb4652a99c88300c,
-        type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8050938006987847664, guid: 20bce8e1a4797f64bb4652a99c88300c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1266,11 +1259,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UI_Documentation
       objectReference: {fileID: 0}
-    - target: {fileID: 8050938006987847665, guid: 20bce8e1a4797f64bb4652a99c88300c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20bce8e1a4797f64bb4652a99c88300c, type: 3}
 --- !u!224 &2487614176361636237 stripped
@@ -1279,6 +1267,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2487614176361636236}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2487614176361636238 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 646730521061689772, guid: 20bce8e1a4797f64bb4652a99c88300c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2487614176361636236}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &2493542703010398019
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1687,11 +1687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_UI_ModelViewer
       objectReference: {fileID: 0}
-    - target: {fileID: 4412405244391629433, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4412405244391629434, guid: 841cd74900ee7ab459c77523f8facdcb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1757,48 +1752,20 @@ PrefabInstance:
       propertyPath: Events.Array.data[1].Settings.Array.data[0].EventValue.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 559401080}
-    - target: {fileID: 6713356114753620505, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356114753620505, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356114753620505, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356114910920735, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356114910920735, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356115247542721, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356115260592539, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6713356115260592539, guid: 841cd74900ee7ab459c77523f8facdcb,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 841cd74900ee7ab459c77523f8facdcb, type: 3}
+--- !u!114 &4412405244155920669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4412405244179354053, guid: 841cd74900ee7ab459c77523f8facdcb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412405244155920668}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4604103088510325879
 MonoBehaviour:
   m_ObjectHideFlags: 0

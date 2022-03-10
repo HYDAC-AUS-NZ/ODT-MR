@@ -5,6 +5,7 @@ using HYDAC.INFO;
 using HYDAC.QR;
 using Microsoft.MixedReality.Toolkit.UI;
 using System;
+using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 
 namespace HYDAC.UI
 {
@@ -24,6 +25,7 @@ namespace HYDAC.UI
         [SerializeField] protected SocQRCallBacks qrCallbacks;
         [SerializeField] protected Transform UIObject;
         [SerializeField] protected Interactable closeButton;
+        [SerializeField] protected Interactable pinButton;
 
         protected SAssetsInfo _currentQRAssets;
 
@@ -50,6 +52,9 @@ namespace HYDAC.UI
                 if (toggle)
                 {
                     UIObject.gameObject.SetActive(true);
+                    UIObject.GetComponent<FollowMeToggle>().SetFollowMeBehavior(true);
+                    pinButton.IsToggled = false;
+
                     this._currentQRAssets = assetInfo;
                     OnUIComponentOpened(this._currentQRAssets);
 

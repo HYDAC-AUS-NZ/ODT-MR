@@ -16,6 +16,12 @@ namespace HYDAC.QR
             EOnUIComponentClosed?.Invoke(component);
         }
 
+        public Action<QRCode> EOnQRCodeCreated;
+        public void InvokeQRCodeCreated(QRCode qr)
+        {
+            EOnQRCodeCreated?.Invoke(qr);
+        }
+
         public Action<QRCode> EOnQRCodeClosed;
         public void InvokeQRCodeClosed(QRCode qr)
         {

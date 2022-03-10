@@ -44,8 +44,6 @@ namespace HYDAC.QR
 
             qrCode = GetComponent<QRCode>();
 
-            AudioManager.Instance.PlayClip(AudioManager.Instance.qrScanned);
-
             SetupQRCode();
         }
 
@@ -71,6 +69,10 @@ namespace HYDAC.QR
 
         private void OnAssetInfoLoadingComplete(AsyncOperationHandle<SAssetsInfo> obj)
         {
+            AudioManager.Instance.PlayClip(AudioManager.Instance.qrScanned);
+
+            qrCallBacks.InvokeQRCodeCreated(qrCode.qrCode);
+
             _assetInfo = obj.Result;
             
             Debug.Log($"#QRCodeManager#----------Product assetInfo downloaded: {_assetInfo.name}");
@@ -78,7 +80,8 @@ namespace HYDAC.QR
             // Setup Buttons
 
             closeButton.OnClick.AddListener(OnCloseButtonClicked);
-            
+
+            modelButton.gameObject.SetActive(_assetInfo.hasModel);
             documentationButton.gameObject.SetActive(_assetInfo.hasDocumentation);
             videoButton.gameObject.SetActive(_assetInfo.hasVideo);
             schematicButton.gameObject.SetActive(_assetInfo.hasSchematic);
