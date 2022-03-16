@@ -63,7 +63,21 @@ MonoBehaviour:
       - m_Id: 90cd83f870e5b774387ded7ad64c8ed1
         m_Value: ServerData/[BuildTarget]
       - m_Id: 936b8ee00a0afb047820f3b197a826be
-        m_Value: https://2ab6c3b0-d369-443d-bbbd-350a2a50fee4.client-api.unity3dusercontent.com/client_api/v1/buckets/789c3168-ca6e-4f03-8c08-12e9020d6e1f/release_by_badge/release/entry_by_path/content/?path=
+        m_Value: 6e-4f03-8c08-12e9020d6e1f/release_by_badge/release/entry_by_path/content/?path=client_api/v1/buckets/789c3168-ca6e-4f03-8c08-12e9020d6e1f/release_by_badge/release/entry_by_path/content/?path=
+    - m_InheritedParent: 
+      m_Id: 2b0a82f75964838478f98c1f3990079f
+      m_ProfileName: Dev
+      m_Values:
+      - m_Id: ce89341b724b51245a314fce1065c95b
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 70320a7c5a573164984e8ddd6786e1e2
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 8f83972713839c245b43d8bbd1deb291
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 90cd83f870e5b774387ded7ad64c8ed1
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 936b8ee00a0afb047820f3b197a826be
+        m_Value: 6e-4f03-8c08-12e9020d6e1f/release_by_badge/dev/entry_by_path/content/?path=client_api/v1/buckets/789c3168-ca6e-4f03-8c08-12e9020d6e1f/release_by_badge/release/entry_by_path/content/?path=
     m_ProfileEntryNames:
     - m_Id: ce89341b724b51245a314fce1065c95b
       m_Name: BuildTarget
@@ -99,7 +113,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 348c5fc738edccb4bb2ae8af698cdd3a, type: 2}
   - {fileID: 11400000, guid: 920f354b139f45644b63474bf5c224ec, type: 2}
   - {fileID: 11400000, guid: f3f5d6cb128c9cd479e06646a6fc1174, type: 2}
-  m_ActiveProfileId: 323ad2a1c0cf72e4da21114208702eb7
+  m_ActiveProfileId: 2b0a82f75964838478f98c1f3990079f
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
