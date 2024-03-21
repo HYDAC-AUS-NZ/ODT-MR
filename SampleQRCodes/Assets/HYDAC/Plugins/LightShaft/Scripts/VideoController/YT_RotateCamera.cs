@@ -10,6 +10,7 @@ public class YT_RotateCamera : MonoBehaviour {
     private float yaw = 0.0f;
     private float pitch = 0.0f;
 
+
     void Update()
     {
         yaw += speedH * Input.GetAxis("Mouse X");

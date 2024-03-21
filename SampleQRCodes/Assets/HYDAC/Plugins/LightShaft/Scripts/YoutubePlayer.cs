@@ -131,6 +131,11 @@ namespace LightShaft.Scripts
             else
             {
                 videoPlayer.Play();
+                if (_controller.volumeSlider != null)
+                    audioPlayer.GetTargetAudioSource(0).volume = _controller.volumeSlider.value;
+                else
+                    audioPlayer.GetTargetAudioSource(0).volume = 1;
+
                 if (!noAudioAtacched)
                 {
                     //audioPlayer.Play(); //TODO check other unity versions
@@ -317,6 +322,13 @@ namespace LightShaft.Scripts
 
         private void OnApplicationQuit()
         {
+            if(videoPlayer != null)
+            {
+                if (videoPlayer.targetTexture != null)
+                    videoPlayer.targetTexture.Release();
+            }
+            
+
             if (!playUsingInternalDevicePlayer)
             {
                 _events.OnYoutubeUrlAreReady.RemoveListener(UrlReadyToUse);

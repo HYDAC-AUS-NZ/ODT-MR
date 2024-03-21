@@ -1,5 +1,4 @@
 ﻿using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -18,8 +17,8 @@ namespace LightShaft.Scripts
         public Image progressRectangle;
         public Slider speedSlider;
         public Slider volumeSlider;
-        public TextMeshProUGUI currentTime;
-        public TextMeshProUGUI totalTime;
+        public Text currentTime;
+        public Text totalTime;
         public GameObject loading;
         public Button nextVideoButton;
         public Button previousVideoButton;
@@ -41,7 +40,8 @@ namespace LightShaft.Scripts
 
             if (!showPlayerControl)
             {
-                controllerMainUI.SetActive(false);
+                if(controllerMainUI != null)
+                    controllerMainUI.SetActive(false);
                 return;
             }
             if (!_player.customPlaylist)
@@ -200,13 +200,11 @@ namespace LightShaft.Scripts
             {
                 showingVolume = false;
                 volumeSlider.gameObject.SetActive(false);
-                playbackSlider.gameObject.SetActive(true);
             }
             else
             {
                 showingVolume = true;
                 volumeSlider.gameObject.SetActive(true);
-                playbackSlider.gameObject.SetActive(false);
             }
         }
 

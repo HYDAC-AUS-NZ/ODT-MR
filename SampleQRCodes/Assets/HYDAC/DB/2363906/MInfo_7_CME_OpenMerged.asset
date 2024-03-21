@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_7_CME_OpenMerged
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 7
+  rename: 0
   productID: 2363906
+  ID: 7
   iname: CME
   description: This is the CME
   isStatic: 1
@@ -28,5 +28,5 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/gRHt9ap7a6A
+  videoURL: https://youtu.be/mddDx6f1KI8
   subModules: []

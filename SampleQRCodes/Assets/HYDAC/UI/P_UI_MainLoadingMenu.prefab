@@ -483,7 +483,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3515875261236241439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 3515875262556138311}
   - component: {fileID: 3515875262556138310}
   m_Layer: 0
-  m_Name: VR Training
+  m_Name: Mixed Reality
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Virtual Reality Training
+  m_text: Mixed Reality Training
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1473d1b126cc50347b3fac1413dfbedd, type: 2}
   m_sharedMaterial: {fileID: 6337498726815173611, guid: 1473d1b126cc50347b3fac1413dfbedd,

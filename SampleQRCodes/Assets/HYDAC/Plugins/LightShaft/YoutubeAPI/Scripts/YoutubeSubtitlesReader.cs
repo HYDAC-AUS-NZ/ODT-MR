@@ -57,7 +57,7 @@ public class YoutubeSubtitlesReader : MonoBehaviour
     System.Collections.IEnumerator DownloadSubtitle()
     {
         //This is a url was made to use with this plugin only, please dont share it.
-        UnityWebRequest request = UnityWebRequest.Get("https://lightshaftstream.herokuapp.com/api/subtitle?url=https://www.youtube.com/watch?v="+videoID+"");
+        UnityWebRequest request = UnityWebRequest.Get("https://flask-service.e1ist6a3bu9ba.us-east-2.cs.amazonlightsail.com/api/subtitle?url=https://www.youtube.com/watch?v=" + videoID+"");
         //request.SetRequestHeader("User-Agent", "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 (Chrome)");
         Debug.Log(request.url);
         yield return request.SendWebRequest();
@@ -69,6 +69,7 @@ public class YoutubeSubtitlesReader : MonoBehaviour
             {
                 if (lang[x]["ext"] == "vtt")
                 {
+                    Debug.Log("loading subtitle");
                     StartCoroutine(DownloadSubtitleFile(lang[x]["url"]));
                     break;
                 }

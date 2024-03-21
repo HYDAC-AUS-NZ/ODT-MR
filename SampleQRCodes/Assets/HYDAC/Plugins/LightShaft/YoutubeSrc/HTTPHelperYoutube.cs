@@ -121,6 +121,103 @@ namespace YoutubeLight
             return uriBuilder.ToString();
         }
 
+        public static string ReplaceQueryStringParameter(string currentPageUrl, string paramToReplace, string newValue)
+        {
+            //Debug.Log(currentPageUrl);
+            var query = ParseQueryString(currentPageUrl);
+
+            query[paramToReplace] = newValue;
+
+            var resultQuery = new StringBuilder();
+            bool isFirst = true;
+
+            foreach (KeyValuePair<string, string> pair in query)
+            {
+                if (!isFirst)
+                {
+                    resultQuery.Append("&");
+                }
+
+                if (pair.Key == "lsig")
+                {
+                    if (pair.Value == "" || pair.Value == string.Empty)
+                    {
+                        resultQuery.Append(pair.Key);
+                        resultQuery.Append("=");
+                    }
+                    else
+                    {
+                        resultQuery.Append(pair.Key);
+                        resultQuery.Append("=");
+                        resultQuery.Append(pair.Value);
+                    }
+                }
+                else
+                {
+                    resultQuery.Append(pair.Key);
+                    resultQuery.Append("=");
+                    resultQuery.Append(pair.Value);
+                }
+
+                //Debug.Log("r: " + resultQuery.ToString());
+
+                isFirst = false;
+            }
+
+            //Debug.Log(resultQuery.ToString());
+            //Debug.Log(currentPageUrl);
+
+            var uriBuilder = new UriBuilder(currentPageUrl)
+            {
+                Query = resultQuery.ToString()
+            };
+
+            //Debug.Log(resultQuery.ToString());
+            //Debug.Log(uriBuilder.ToString());
+
+            return uriBuilder.ToString();
+        }
+
+        public static string ReplaceQueryStringParameterx(string currentPageUrl, string paramToReplace, string newValue)
+        {
+            //Debug.Log(currentPageUrl);
+            var query = ParseQueryString(currentPageUrl);
+
+            query[paramToReplace] = newValue;
+
+            var resultQuery = new StringBuilder();
+            bool isFirst = true;
+
+            foreach (KeyValuePair<string, string> pair in query)
+            {
+                if (!isFirst)
+                {
+                    resultQuery.Append("&");
+                }
+
+                resultQuery.Append(pair.Key);
+                resultQuery.Append("=");
+                resultQuery.Append(pair.Value);
+
+                //Debug.Log("r: " + resultQuery.ToString());
+
+                isFirst = false;
+            }
+
+            //Debug.Log(resultQuery.ToString());
+            //Debug.Log(currentPageUrl);
+
+            var uriBuilder = new UriBuilder(currentPageUrl)
+            {
+                Query = resultQuery.ToString()
+            };
+
+            //Debug.Log(resultQuery.ToString());
+            //Debug.Log(uriBuilder.ToString());
+
+            return uriBuilder.ToString();
+        }
+
         public static string UrlDecode(string url)
         {
 

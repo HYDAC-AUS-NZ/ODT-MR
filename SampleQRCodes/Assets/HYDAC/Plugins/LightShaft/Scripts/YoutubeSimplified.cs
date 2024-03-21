@@ -22,6 +22,7 @@ public class YoutubeSimplified : MonoBehaviour
 
     private void Start()
     {
+        player.dontForceFullscreen = true;
         Play();
     }
 
@@ -30,6 +31,9 @@ public class YoutubeSimplified : MonoBehaviour
         if (fullscreen)
         {
             videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+            videoPlayer.aspectRatio = VideoAspectRatio.FitInside;
+            videoPlayer.targetCamera = player.mainCamera;
+            
         }
         player.autoPlayOnStart = autoPlay;
         player.videoQuality = YoutubePlayer.YoutubeVideoQuality.STANDARD;

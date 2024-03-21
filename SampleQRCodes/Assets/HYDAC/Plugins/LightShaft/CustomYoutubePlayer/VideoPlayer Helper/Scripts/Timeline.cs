@@ -133,8 +133,8 @@ namespace Unity.VideoHelper
                 UpdateVisuals();
             }
 
-            var prefabType = UnityEditor.PrefabUtility.GetPrefabType(this);
-            if (prefabType != UnityEditor.PrefabType.Prefab && !Application.isPlaying)
+            var prefabType = UnityEditor.PrefabUtility.GetPrefabAssetType(this);
+            if (prefabType == UnityEditor.PrefabAssetType.NotAPrefab && !Application.isPlaying)
                 CanvasUpdateRegistry.RegisterCanvasElementForLayoutRebuild(this);
         }
 #endif
