@@ -32,4 +32,4 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/798sbsYdW1Q
+  videoClip: {fileID: 32900000, guid: 2d8ab45038978f14eb29c76443510d2d, type: 3}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_3_3 Filter
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 3
+  rename: 0
   productID: flnd1
+  ID: 3
   iname: Filter
   description: 'Description:'
   isStatic: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/ChXdmhJw420
+  videoClip: {fileID: 32900000, guid: 2d8ab45038978f14eb29c76443510d2d, type: 3}
   subModules:
   - {fileID: 11400000, guid: 2248c193ffd2a9040a953ff3523bbe4e, type: 2}
   - {fileID: 11400000, guid: 54d72e77b831776409856e3ad88ce209, type: 2}

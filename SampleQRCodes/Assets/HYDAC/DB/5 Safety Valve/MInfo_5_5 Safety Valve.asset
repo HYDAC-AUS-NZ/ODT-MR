@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/Vk9WbYmFqF0
+  videoClip: {fileID: 32900000, guid: 5ff94e24672005e4bb7be4b4e688ef4e, type: 3}
   subModules:
   - {fileID: 11400000, guid: 507b5afc3db0a4e499b21a9d87bad374, type: 2}
   - {fileID: 11400000, guid: 284e088d1ba80e74090aed1af475670c, type: 2}

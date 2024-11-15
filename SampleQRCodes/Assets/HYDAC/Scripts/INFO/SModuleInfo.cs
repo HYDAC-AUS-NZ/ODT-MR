@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Video;
 
 namespace HYDAC.INFO
 {
@@ -10,13 +11,13 @@ namespace HYDAC.INFO
         
         [SerializeField] private AssetReference highPolyReference;
         [SerializeField] private AssetReference infoUIReference = null;
-        [SerializeField] private string videoURL = null;
+        [SerializeField] private VideoClip videoClip = null;
 
         [SerializeField] private SSubModuleInfo[] subModules;
 
         public AssetReference HighPolyReference => highPolyReference;
         public AssetReference InfoUIReference => infoUIReference;
-        public string VideoURL => videoURL;
+        public VideoClip VideoClip => videoClip;
 
         public SSubModuleInfo[] SubModules => subModules;
         public void SetSubModules(SSubModuleInfo[] subModuleInfos) { subModules = subModuleInfos; }

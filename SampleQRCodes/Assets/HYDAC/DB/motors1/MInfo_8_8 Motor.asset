@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_8_8 Motor
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 8
+  rename: 0
   productID: motors1
+  ID: 8
   iname: Motor / Pump
   description: 'Description:'
   isStatic: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/4WLcvDKSf74
+  videoClip: {fileID: 32900000, guid: d9bb523ba4ada6543b5412c30c2e3f8e, type: 3}
   subModules:
   - {fileID: 11400000, guid: c0354a5a6f897c14c9562b29a34229bf, type: 2}
   - {fileID: 11400000, guid: a482f81eae5874144ae9dcfe6448356b, type: 2}

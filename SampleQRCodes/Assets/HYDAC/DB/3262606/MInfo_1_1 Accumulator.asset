@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_1_1 Accumulator
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 1
+  rename: 0
   productID: 3262606
+  ID: 1
   iname: Accumulator
   description: This is the accumulator
   isStatic: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/WvqPoOyNog0
+  videoClip: {fileID: 32900000, guid: 607df85844fe9b54f8fd24b6caf086e6, type: 3}
   subModules:
   - {fileID: 11400000, guid: 511cd7b89a1f5cf4198da4af01bd27a8, type: 2}
   - {fileID: 11400000, guid: 0e67eb5db68e26b47bf6a7349cd1c52a, type: 2}

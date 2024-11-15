@@ -464,9 +464,8 @@ MonoBehaviour:
   UIObject: {fileID: 678979466496804871}
   closeButton: {fileID: 109440427}
   pinButton: {fileID: 2483939652294751427}
-  videoPlayer: {fileID: 6154463309830934741}
+  videoPlayerController: {fileID: 2483939652294751428}
   playbackButton: {fileID: 1408001826890290544}
-  placeHolderVideoURL: https://www.youtube.com/watch?v=ScMzIvxBSi4
 --- !u!114 &559401079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,6 +1441,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1410eac1ae94b4d4492a09cc368e152c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2483939652294751428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6508497924562446247, guid: 5102941d779d8e646812e1639a4f7c03,
+    type: 3}
+  m_PrefabInstance: {fileID: 2483939652294751426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63fc71ac0f6e0b04e9e88701aec3384b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2487614176361636236
@@ -3269,18 +3280,6 @@ MonoBehaviour:
   cellWidth: 0.05
   cellHeight: 0.05
   assetVersion: 1
---- !u!114 &6154463309830934741 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8579834692116472855, guid: 5102941d779d8e646812e1639a4f7c03,
-    type: 3}
-  m_PrefabInstance: {fileID: 2483939652294751426}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7418089f4181645b5df8f90e317bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &6158203878713664389
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_6_6 Manifold
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 6
+  rename: 0
   productID: manifold1
+  ID: 6
   iname: Manifold
   description: This is the manifold
   isStatic: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/hsUX0EVLEdo
+  videoClip: {fileID: 32900000, guid: 429ca7259bc364d4cbfe32e8a5b492cc, type: 3}
   subModules:
   - {fileID: 11400000, guid: 2b9071d883c4d3642b7343c8dd0cee4f, type: 2}
   - {fileID: 11400000, guid: a9860cd0d497eff43b81693bdc9e86bc, type: 2}

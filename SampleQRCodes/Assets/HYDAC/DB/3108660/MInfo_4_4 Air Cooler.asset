@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227cff59cdacc30448699035f8e0f93f, type: 3}
   m_Name: MInfo_4_4 Air Cooler
   m_EditorClassIdentifier: 
-  renameOnValidate: 0
-  ID: 4
+  rename: 0
   productID: 3108660
+  ID: 4
   iname: Cooler
   description: 'Description:'
   isStatic: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  videoURL: https://youtu.be/eCHYKhDNqPs
+  videoClip: {fileID: 32900000, guid: 2b7517ea991ccbc4d9948772f3192b9d, type: 3}
   subModules:
   - {fileID: 11400000, guid: da4a8486ff733cf41b2f82131797a014, type: 2}
   - {fileID: 11400000, guid: 96a42859f87203b45a76172fb7256185, type: 2}

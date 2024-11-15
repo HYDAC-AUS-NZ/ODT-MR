@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Video;
 
 namespace HYDAC.INFO
 {
@@ -17,11 +18,11 @@ namespace HYDAC.INFO
         [SerializeField] private AssetReference schematicReference;
         [SerializeField] private AssetReference modelReference;
         [SerializeField] private AssetReference documentationReference = null;
-        [SerializeField] private string videoURL = null;
+        [SerializeField] private VideoClip videoClip = null;
 
         public AssetReference SchematicReference => schematicReference;
         public AssetReference HighPolyReference => modelReference;
         public AssetReference InfoUIReference => documentationReference;
-        public string VideoURL => videoURL;
+        public VideoClip VideoClip => videoClip;
     }
 }
