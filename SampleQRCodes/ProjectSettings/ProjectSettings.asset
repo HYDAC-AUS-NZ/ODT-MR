@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: HYDAC
-  productName: HYDAC Catalogue
+  productName: Infield Real Time Assistance
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -661,16 +661,21 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: HYDACMR
+  metroPackageName: HYDAC-IRTA-MR
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: HYDAC
   metroCertificateIssuer: HYDAC
   metroCertificateNotAfter: 0020a5a16d99db01
-  metroApplicationDescription: Template_3D
-  wsaImages: {}
-  metroTileShortName: HYDAC Catalogue
+  metroApplicationDescription: Infield technical resources for the HYBOX Maxi system
+  wsaImages:
+    2031816: Assets/HYDAC/UI/Logos/HYDAC Logo_Square_88x88.png
+    2097352: Assets/HYDAC/UI/Logos/HYDAC Logo_Square_142x142.png
+    2162888: Assets/HYDAC/UI/Logos/HYDAC Logo_Square_300x300.png
+    2228424: Assets/HYDAC/UI/Logos/HYDAC Logo_Square_620x620.png
+    2293960: Assets/HYDAC/UI/Logos/HYDAC Logo_Square_620x300.png
+  metroTileShortName: Infield Assistance
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
